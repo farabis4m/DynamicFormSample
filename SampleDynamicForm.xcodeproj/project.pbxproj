@@ -8,20 +8,120 @@
 
 /* Begin PBXBuildFile section */
 		0C4A715422AF718A0095F8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A715322AF718A0095F8B6 /* AppDelegate.swift */; };
-		0C4A715622AF718A0095F8B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A715522AF718A0095F8B6 /* ViewController.swift */; };
+		0C4A715622AF718A0095F8B6 /* DynamicFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A715522AF718A0095F8B6 /* DynamicFormViewController.swift */; };
 		0C4A715922AF718A0095F8B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A715722AF718A0095F8B6 /* Main.storyboard */; };
 		0C4A715B22AF718B0095F8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A715A22AF718B0095F8B6 /* Assets.xcassets */; };
 		0C4A715E22AF718B0095F8B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A715C22AF718B0095F8B6 /* LaunchScreen.storyboard */; };
+		0C4A716622AF86C70095F8B6 /* dynamicForm.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A716522AF86C70095F8B6 /* dynamicForm.json */; };
+		0C4A717122AFC3970095F8B6 /* UIResponderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A717022AFC3970095F8B6 /* UIResponderExtension.swift */; };
+		0C4A718722B0DF720095F8B6 /* BasicFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A718322B0DF720095F8B6 /* BasicFieldTableViewCell.swift */; };
+		0C4A718822B0DF720095F8B6 /* BaseFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A718422B0DF720095F8B6 /* BaseFieldRow.swift */; };
+		0C4A718922B0DF720095F8B6 /* BasicFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A718522B0DF720095F8B6 /* BasicFormCell.swift */; };
+		0C4A718A22B0DF720095F8B6 /* DBaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A718622B0DF720095F8B6 /* DBaseRow.swift */; };
+		0C4A718E22B0E0D20095F8B6 /* DTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A718D22B0E0D20095F8B6 /* DTextFieldCell.swift */; };
+		0C4A719022B0E31B0095F8B6 /* DTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A718F22B0E31B0095F8B6 /* DTextFieldCell.xib */; };
+		0C4A719222B23D700095F8B6 /* RowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A719122B23D700095F8B6 /* RowExtension.swift */; };
+		0C4A719422B23DA90095F8B6 /* ValidationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A719322B23DA90095F8B6 /* ValidationCell.swift */; };
+		0C4A719622B23DC90095F8B6 /* ValidationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A719522B23DC90095F8B6 /* ValidationCell.xib */; };
+		0C4A719A22B2593B0095F8B6 /* DPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A719922B2593B0095F8B6 /* DPickerCell.swift */; };
+		0C4A719C22B259490095F8B6 /* DPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A719B22B259490095F8B6 /* DPickerCell.xib */; };
+		0C4A71A022B25E490095F8B6 /* Listable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A719F22B25E490095F8B6 /* Listable.swift */; };
+		0C4A71A622B65FD50095F8B6 /* DLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71A522B65FD50095F8B6 /* DLabelCell.swift */; };
+		0C4A71A822B65FE70095F8B6 /* DLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A71A722B65FE70095F8B6 /* DLabelCell.xib */; };
+		0C4A71AB22B6602C0095F8B6 /* DLOV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71AA22B6602C0095F8B6 /* DLOV.swift */; };
+		0C4A71B222B789DF0095F8B6 /* FormExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71B122B789DF0095F8B6 /* FormExtension.swift */; };
+		0C4A71B422B78C230095F8B6 /* DDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71B322B78C230095F8B6 /* DDatePickerCell.swift */; };
+		0C4A71B722B78C3E0095F8B6 /* DDatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A71B622B78C3E0095F8B6 /* DDatePickerCell.xib */; };
+		0C4A71B922B7C5610095F8B6 /* DSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71B822B7C5610095F8B6 /* DSwitchCell.swift */; };
+		0C4A71BB22B7C5700095F8B6 /* DSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A71BA22B7C5700095F8B6 /* DSwitchCell.xib */; };
+		0C4A71C322B909AF0095F8B6 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71C222B909AF0095F8B6 /* SearchTextField.swift */; };
+		0C4A71C522B9191B0095F8B6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71C422B9191B0095F8B6 /* StringExtension.swift */; };
+		0C4A71C722B921D90095F8B6 /* DSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71C622B921D90095F8B6 /* DSearchCell.swift */; };
+		0C4A71C922B921F20095F8B6 /* DSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A71C822B921F20095F8B6 /* DSearchCell.xib */; };
+		0C4A71CC22BA1B130095F8B6 /* DCheckBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71CB22BA1B130095F8B6 /* DCheckBoxCell.swift */; };
+		0C4A71CE22BA1C610095F8B6 /* DCheckBoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A71CD22BA1C600095F8B6 /* DCheckBoxCell.xib */; };
+		0C4A71D122BA31B40095F8B6 /* DButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A71D022BA31B40095F8B6 /* DButtonCell.swift */; };
+		0C4A71D322BA31CA0095F8B6 /* DButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4A71D222BA31CA0095F8B6 /* DButtonCell.xib */; };
+		0C92D88022BA6522003594BC /* BaseDynamicFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92D87F22BA6522003594BC /* BaseDynamicFormViewController.swift */; };
+		0CD4FE1E22BB57F700A9B3D0 /* DImagePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4FE1D22BB57F700A9B3D0 /* DImagePickerCell.swift */; };
+		0CD4FE2022BB580900A9B3D0 /* DImagePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD4FE1F22BB580900A9B3D0 /* DImagePickerCell.xib */; };
+		0CD4FE2222BB701300A9B3D0 /* BaseImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4FE2122BB701300A9B3D0 /* BaseImageCell.swift */; };
+		0CD4FE2522BB77BD00A9B3D0 /* BasePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4FE2422BB77BD00A9B3D0 /* BasePickerRow.swift */; };
+		0CD4FE2722BB823000A9B3D0 /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4FE2622BB823000A9B3D0 /* ImageRow.swift */; };
+		0CD4FE2922BB829900A9B3D0 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4FE2822BB829900A9B3D0 /* ImagePickerController.swift */; };
+		908BEF461C72EF2929D980E4 /* Pods_SampleDynamicForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EC010013649BC19B8B8BB7 /* Pods_SampleDynamicForm.framework */; };
+		BE5F92C422D1DB0D0070F7EF /* BaseDocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F92C322D1DB0D0070F7EF /* BaseDocumentCell.swift */; };
+		BE9F3D20230BDDC00008C40D /* leave.json in Resources */ = {isa = PBXBuildFile; fileRef = BE9F3D1F230BDDC00008C40D /* leave.json */; };
+		BE9F3D23230BDE170008C40D /* DynamicRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F3D22230BDE170008C40D /* DynamicRow.swift */; };
+		BE9F3D25230C33180008C40D /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F3D24230C33180008C40D /* DynamicViewController.swift */; };
+		BE9F3D27230D84C50008C40D /* DynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F3D26230D84C50008C40D /* DynamicForm.swift */; };
+		BEEEB5C422D09B9A00BDA553 /* DocumentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEEB5C222D09B9900BDA553 /* DocumentCollectionViewCell.swift */; };
+		BEEEB5C522D09B9A00BDA553 /* DocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEEEB5C322D09B9A00BDA553 /* DocumentCollectionViewCell.xib */; };
+		BEF07FE122CE0A3400958B76 /* DDocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF07FDF22CE0A3400958B76 /* DDocumentCell.swift */; };
+		BEF07FE222CE0A3400958B76 /* DDocumentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEF07FE022CE0A3400958B76 /* DDocumentCell.xib */; };
+		BEF07FE522CE2AF300958B76 /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF07FE422CE2AF300958B76 /* CustomCameraViewController.swift */; };
+		BEF07FE722CE319000958B76 /* CustomCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEF07FE622CE319000958B76 /* CustomCameraViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C4A715022AF718A0095F8B6 /* SampleDynamicForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleDynamicForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4A715322AF718A0095F8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C4A715522AF718A0095F8B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C4A715522AF718A0095F8B6 /* DynamicFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFormViewController.swift; sourceTree = "<group>"; };
 		0C4A715822AF718A0095F8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C4A715A22AF718B0095F8B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C4A715D22AF718B0095F8B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C4A715F22AF718B0095F8B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C4A716522AF86C70095F8B6 /* dynamicForm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dynamicForm.json; sourceTree = "<group>"; };
+		0C4A717022AFC3970095F8B6 /* UIResponderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponderExtension.swift; sourceTree = "<group>"; };
+		0C4A718322B0DF720095F8B6 /* BasicFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicFieldTableViewCell.swift; sourceTree = "<group>"; };
+		0C4A718422B0DF720095F8B6 /* BaseFieldRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFieldRow.swift; sourceTree = "<group>"; };
+		0C4A718522B0DF720095F8B6 /* BasicFormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicFormCell.swift; sourceTree = "<group>"; };
+		0C4A718622B0DF720095F8B6 /* DBaseRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBaseRow.swift; sourceTree = "<group>"; };
+		0C4A718D22B0E0D20095F8B6 /* DTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTextFieldCell.swift; sourceTree = "<group>"; };
+		0C4A718F22B0E31B0095F8B6 /* DTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DTextFieldCell.xib; sourceTree = "<group>"; };
+		0C4A719122B23D700095F8B6 /* RowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowExtension.swift; sourceTree = "<group>"; };
+		0C4A719322B23DA90095F8B6 /* ValidationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationCell.swift; sourceTree = "<group>"; };
+		0C4A719522B23DC90095F8B6 /* ValidationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidationCell.xib; sourceTree = "<group>"; };
+		0C4A719922B2593B0095F8B6 /* DPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPickerCell.swift; sourceTree = "<group>"; };
+		0C4A719B22B259490095F8B6 /* DPickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DPickerCell.xib; sourceTree = "<group>"; };
+		0C4A719F22B25E490095F8B6 /* Listable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listable.swift; sourceTree = "<group>"; };
+		0C4A71A522B65FD50095F8B6 /* DLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLabelCell.swift; sourceTree = "<group>"; };
+		0C4A71A722B65FE70095F8B6 /* DLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DLabelCell.xib; sourceTree = "<group>"; };
+		0C4A71AA22B6602C0095F8B6 /* DLOV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLOV.swift; sourceTree = "<group>"; };
+		0C4A71B122B789DF0095F8B6 /* FormExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormExtension.swift; sourceTree = "<group>"; };
+		0C4A71B322B78C230095F8B6 /* DDatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDatePickerCell.swift; sourceTree = "<group>"; };
+		0C4A71B622B78C3E0095F8B6 /* DDatePickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDatePickerCell.xib; sourceTree = "<group>"; };
+		0C4A71B822B7C5610095F8B6 /* DSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSwitchCell.swift; sourceTree = "<group>"; };
+		0C4A71BA22B7C5700095F8B6 /* DSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSwitchCell.xib; sourceTree = "<group>"; };
+		0C4A71C222B909AF0095F8B6 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		0C4A71C422B9191B0095F8B6 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		0C4A71C622B921D90095F8B6 /* DSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSearchCell.swift; sourceTree = "<group>"; };
+		0C4A71C822B921F20095F8B6 /* DSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSearchCell.xib; sourceTree = "<group>"; };
+		0C4A71CB22BA1B130095F8B6 /* DCheckBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCheckBoxCell.swift; sourceTree = "<group>"; };
+		0C4A71CD22BA1C600095F8B6 /* DCheckBoxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCheckBoxCell.xib; sourceTree = "<group>"; };
+		0C4A71D022BA31B40095F8B6 /* DButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DButtonCell.swift; sourceTree = "<group>"; };
+		0C4A71D222BA31CA0095F8B6 /* DButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DButtonCell.xib; sourceTree = "<group>"; };
+		0C92D87F22BA6522003594BC /* BaseDynamicFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDynamicFormViewController.swift; sourceTree = "<group>"; };
+		0CD4FE1D22BB57F700A9B3D0 /* DImagePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DImagePickerCell.swift; sourceTree = "<group>"; };
+		0CD4FE1F22BB580900A9B3D0 /* DImagePickerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DImagePickerCell.xib; sourceTree = "<group>"; };
+		0CD4FE2122BB701300A9B3D0 /* BaseImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageCell.swift; sourceTree = "<group>"; };
+		0CD4FE2422BB77BD00A9B3D0 /* BasePickerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePickerRow.swift; sourceTree = "<group>"; };
+		0CD4FE2622BB823000A9B3D0 /* ImageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
+		0CD4FE2822BB829900A9B3D0 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		0E1792AA262174FD0A66A0DA /* Pods-SampleDynamicForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleDynamicForm.release.xcconfig"; path = "Target Support Files/Pods-SampleDynamicForm/Pods-SampleDynamicForm.release.xcconfig"; sourceTree = "<group>"; };
+		BE5F92C322D1DB0D0070F7EF /* BaseDocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDocumentCell.swift; sourceTree = "<group>"; };
+		BE9F3D1F230BDDC00008C40D /* leave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leave.json; sourceTree = "<group>"; };
+		BE9F3D22230BDE170008C40D /* DynamicRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicRow.swift; sourceTree = "<group>"; };
+		BE9F3D24230C33180008C40D /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
+		BE9F3D26230D84C50008C40D /* DynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicForm.swift; sourceTree = "<group>"; };
+		BEEEB5C222D09B9900BDA553 /* DocumentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEEEB5C322D09B9A00BDA553 /* DocumentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DocumentCollectionViewCell.xib; sourceTree = "<group>"; };
+		BEF07FDF22CE0A3400958B76 /* DDocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDocumentCell.swift; sourceTree = "<group>"; };
+		BEF07FE022CE0A3400958B76 /* DDocumentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DDocumentCell.xib; sourceTree = "<group>"; };
+		BEF07FE422CE2AF300958B76 /* CustomCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
+		BEF07FE622CE319000958B76 /* CustomCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCameraViewController.xib; sourceTree = "<group>"; };
+		D0BF215AC7A432278880295A /* Pods-SampleDynamicForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleDynamicForm.debug.xcconfig"; path = "Target Support Files/Pods-SampleDynamicForm/Pods-SampleDynamicForm.debug.xcconfig"; sourceTree = "<group>"; };
+		E9EC010013649BC19B8B8BB7 /* Pods_SampleDynamicForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleDynamicForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908BEF461C72EF2929D980E4 /* Pods_SampleDynamicForm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +141,8 @@
 			children = (
 				0C4A715222AF718A0095F8B6 /* SampleDynamicForm */,
 				0C4A715122AF718A0095F8B6 /* Products */,
+				F008A2C6030A5FBDF919A748 /* Pods */,
+				AA237C388ECD3A92681A9DE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +158,238 @@
 			isa = PBXGroup;
 			children = (
 				0C4A715322AF718A0095F8B6 /* AppDelegate.swift */,
-				0C4A715522AF718A0095F8B6 /* ViewController.swift */,
-				0C4A715722AF718A0095F8B6 /* Main.storyboard */,
+				0C92D87E22BA54C6003594BC /* VIew */,
+				0C4A71AC22B660310095F8B6 /* Model */,
+				0C4A719E22B25E3D0095F8B6 /* Protocol */,
+				0C4A718022B0D0EA0095F8B6 /* EurekaCell */,
+				0C4A716F22AFC37D0095F8B6 /* Extension */,
+				0C4A71A322B655AB0095F8B6 /* ViewController */,
+				0C4A71A422B655B60095F8B6 /* StoryBoard */,
 				0C4A715A22AF718B0095F8B6 /* Assets.xcassets */,
 				0C4A715C22AF718B0095F8B6 /* LaunchScreen.storyboard */,
 				0C4A715F22AF718B0095F8B6 /* Info.plist */,
+				BE9F3D1F230BDDC00008C40D /* leave.json */,
+				0C4A716522AF86C70095F8B6 /* dynamicForm.json */,
 			);
 			path = SampleDynamicForm;
+			sourceTree = "<group>";
+		};
+		0C4A716F22AFC37D0095F8B6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A717022AFC3970095F8B6 /* UIResponderExtension.swift */,
+				0C4A71C422B9191B0095F8B6 /* StringExtension.swift */,
+				0C4A719122B23D700095F8B6 /* RowExtension.swift */,
+				0C4A71B122B789DF0095F8B6 /* FormExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0C4A718022B0D0EA0095F8B6 /* EurekaCell */ = {
+			isa = PBXGroup;
+			children = (
+				BEF07FDE22CE09F500958B76 /* DocumentCell */,
+				0C4A718C22B0DFAB0095F8B6 /* Base */,
+				0C4A719822B244070095F8B6 /* TextFieldCell */,
+				0C4A719722B243FE0095F8B6 /* ValidationCell */,
+				0C4A719D22B25A6C0095F8B6 /* PickerCell */,
+				0C4A71A922B65FED0095F8B6 /* LabelCell */,
+				0C4A71B522B78C280095F8B6 /* DatePickerCell */,
+				0C4A71BC22B7C5760095F8B6 /* SwitchCell */,
+				0C4A71CA22BA1A140095F8B6 /* SearchCell */,
+				0C4A71CF22BA30890095F8B6 /* CheckBoxCell */,
+				0C4A71D422BA31CF0095F8B6 /* ButtonCell */,
+				0CD4FE2322BB70C400A9B3D0 /* ImageCell */,
+			);
+			path = EurekaCell;
+			sourceTree = "<group>";
+		};
+		0C4A718C22B0DFAB0095F8B6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A718622B0DF720095F8B6 /* DBaseRow.swift */,
+				0CD4FE2622BB823000A9B3D0 /* ImageRow.swift */,
+				0CD4FE2822BB829900A9B3D0 /* ImagePickerController.swift */,
+				0CD4FE2122BB701300A9B3D0 /* BaseImageCell.swift */,
+				0CD4FE2422BB77BD00A9B3D0 /* BasePickerRow.swift */,
+				0C4A718422B0DF720095F8B6 /* BaseFieldRow.swift */,
+				0C4A718522B0DF720095F8B6 /* BasicFormCell.swift */,
+				0C4A718322B0DF720095F8B6 /* BasicFieldTableViewCell.swift */,
+				BE5F92C322D1DB0D0070F7EF /* BaseDocumentCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0C4A719722B243FE0095F8B6 /* ValidationCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A719322B23DA90095F8B6 /* ValidationCell.swift */,
+				0C4A719522B23DC90095F8B6 /* ValidationCell.xib */,
+			);
+			path = ValidationCell;
+			sourceTree = "<group>";
+		};
+		0C4A719822B244070095F8B6 /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A718D22B0E0D20095F8B6 /* DTextFieldCell.swift */,
+				0C4A718F22B0E31B0095F8B6 /* DTextFieldCell.xib */,
+			);
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		0C4A719D22B25A6C0095F8B6 /* PickerCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A719922B2593B0095F8B6 /* DPickerCell.swift */,
+				0C4A719B22B259490095F8B6 /* DPickerCell.xib */,
+			);
+			path = PickerCell;
+			sourceTree = "<group>";
+		};
+		0C4A719E22B25E3D0095F8B6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A719F22B25E490095F8B6 /* Listable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		0C4A71A322B655AB0095F8B6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C92D88122BA663A003594BC /* BaseFormViewController */,
+				0C4A715522AF718A0095F8B6 /* DynamicFormViewController.swift */,
+				BE9F3D24230C33180008C40D /* DynamicViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C4A71A422B655B60095F8B6 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A715722AF718A0095F8B6 /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		0C4A71A922B65FED0095F8B6 /* LabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A71A522B65FD50095F8B6 /* DLabelCell.swift */,
+				0C4A71A722B65FE70095F8B6 /* DLabelCell.xib */,
+			);
+			path = LabelCell;
+			sourceTree = "<group>";
+		};
+		0C4A71AC22B660310095F8B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A71AA22B6602C0095F8B6 /* DLOV.swift */,
+				BE9F3D22230BDE170008C40D /* DynamicRow.swift */,
+				BE9F3D26230D84C50008C40D /* DynamicForm.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C4A71B522B78C280095F8B6 /* DatePickerCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A71B322B78C230095F8B6 /* DDatePickerCell.swift */,
+				0C4A71B622B78C3E0095F8B6 /* DDatePickerCell.xib */,
+			);
+			path = DatePickerCell;
+			sourceTree = "<group>";
+		};
+		0C4A71BC22B7C5760095F8B6 /* SwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A71B822B7C5610095F8B6 /* DSwitchCell.swift */,
+				0C4A71BA22B7C5700095F8B6 /* DSwitchCell.xib */,
+			);
+			path = SwitchCell;
+			sourceTree = "<group>";
+		};
+		0C4A71CA22BA1A140095F8B6 /* SearchCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A71C622B921D90095F8B6 /* DSearchCell.swift */,
+				0C4A71C822B921F20095F8B6 /* DSearchCell.xib */,
+			);
+			path = SearchCell;
+			sourceTree = "<group>";
+		};
+		0C4A71CF22BA30890095F8B6 /* CheckBoxCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A71CB22BA1B130095F8B6 /* DCheckBoxCell.swift */,
+				0C4A71CD22BA1C600095F8B6 /* DCheckBoxCell.xib */,
+			);
+			path = CheckBoxCell;
+			sourceTree = "<group>";
+		};
+		0C4A71D422BA31CF0095F8B6 /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A71D022BA31B40095F8B6 /* DButtonCell.swift */,
+				0C4A71D222BA31CA0095F8B6 /* DButtonCell.xib */,
+			);
+			path = ButtonCell;
+			sourceTree = "<group>";
+		};
+		0C92D87E22BA54C6003594BC /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				0C4A71C222B909AF0095F8B6 /* SearchTextField.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		0C92D88122BA663A003594BC /* BaseFormViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C92D87F22BA6522003594BC /* BaseDynamicFormViewController.swift */,
+			);
+			path = BaseFormViewController;
+			sourceTree = "<group>";
+		};
+		0CD4FE2322BB70C400A9B3D0 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				0CD4FE1D22BB57F700A9B3D0 /* DImagePickerCell.swift */,
+				0CD4FE1F22BB580900A9B3D0 /* DImagePickerCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		AA237C388ECD3A92681A9DE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC010013649BC19B8B8BB7 /* Pods_SampleDynamicForm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEF07FDE22CE09F500958B76 /* DocumentCell */ = {
+			isa = PBXGroup;
+			children = (
+				BEF07FE422CE2AF300958B76 /* CustomCameraViewController.swift */,
+				BEF07FE622CE319000958B76 /* CustomCameraViewController.xib */,
+				BEF07FDF22CE0A3400958B76 /* DDocumentCell.swift */,
+				BEF07FE022CE0A3400958B76 /* DDocumentCell.xib */,
+				BEEEB5C222D09B9900BDA553 /* DocumentCollectionViewCell.swift */,
+				BEEEB5C322D09B9A00BDA553 /* DocumentCollectionViewCell.xib */,
+			);
+			path = DocumentCell;
+			sourceTree = "<group>";
+		};
+		F008A2C6030A5FBDF919A748 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0BF215AC7A432278880295A /* Pods-SampleDynamicForm.debug.xcconfig */,
+				0E1792AA262174FD0A66A0DA /* Pods-SampleDynamicForm.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +399,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C4A716222AF718B0095F8B6 /* Build configuration list for PBXNativeTarget "SampleDynamicForm" */;
 			buildPhases = (
+				0767A74932B3B6EE0ED3A6D9 /* [CP] Check Pods Manifest.lock */,
 				0C4A714C22AF718A0095F8B6 /* Sources */,
 				0C4A714D22AF718A0095F8B6 /* Frameworks */,
 				0C4A714E22AF718A0095F8B6 /* Resources */,
+				C748448457F96FF53B062A6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,21 +452,118 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4A71B722B78C3E0095F8B6 /* DDatePickerCell.xib in Resources */,
+				BE9F3D20230BDDC00008C40D /* leave.json in Resources */,
+				0C4A719C22B259490095F8B6 /* DPickerCell.xib in Resources */,
+				BEF07FE722CE319000958B76 /* CustomCameraViewController.xib in Resources */,
+				0C4A71D322BA31CA0095F8B6 /* DButtonCell.xib in Resources */,
+				0C4A71C922B921F20095F8B6 /* DSearchCell.xib in Resources */,
+				BEF07FE222CE0A3400958B76 /* DDocumentCell.xib in Resources */,
+				0C4A719022B0E31B0095F8B6 /* DTextFieldCell.xib in Resources */,
 				0C4A715E22AF718B0095F8B6 /* LaunchScreen.storyboard in Resources */,
+				BEEEB5C522D09B9A00BDA553 /* DocumentCollectionViewCell.xib in Resources */,
+				0CD4FE2022BB580900A9B3D0 /* DImagePickerCell.xib in Resources */,
+				0C4A71A822B65FE70095F8B6 /* DLabelCell.xib in Resources */,
 				0C4A715B22AF718B0095F8B6 /* Assets.xcassets in Resources */,
 				0C4A715922AF718A0095F8B6 /* Main.storyboard in Resources */,
+				0C4A719622B23DC90095F8B6 /* ValidationCell.xib in Resources */,
+				0C4A71CE22BA1C610095F8B6 /* DCheckBoxCell.xib in Resources */,
+				0C4A71BB22B7C5700095F8B6 /* DSwitchCell.xib in Resources */,
+				0C4A716622AF86C70095F8B6 /* dynamicForm.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0767A74932B3B6EE0ED3A6D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SampleDynamicForm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C748448457F96FF53B062A6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleDynamicForm/Pods-SampleDynamicForm-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleDynamicForm/Pods-SampleDynamicForm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C4A714C22AF718A0095F8B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C4A715622AF718A0095F8B6 /* ViewController.swift in Sources */,
+				0C4A71B422B78C230095F8B6 /* DDatePickerCell.swift in Sources */,
+				0CD4FE2522BB77BD00A9B3D0 /* BasePickerRow.swift in Sources */,
+				0C4A719222B23D700095F8B6 /* RowExtension.swift in Sources */,
+				0C4A71A622B65FD50095F8B6 /* DLabelCell.swift in Sources */,
+				0C4A71A022B25E490095F8B6 /* Listable.swift in Sources */,
+				0CD4FE2722BB823000A9B3D0 /* ImageRow.swift in Sources */,
+				0C4A71CC22BA1B130095F8B6 /* DCheckBoxCell.swift in Sources */,
+				0C4A718922B0DF720095F8B6 /* BasicFormCell.swift in Sources */,
+				0C4A71B222B789DF0095F8B6 /* FormExtension.swift in Sources */,
+				0C4A71C722B921D90095F8B6 /* DSearchCell.swift in Sources */,
+				0C4A718822B0DF720095F8B6 /* BaseFieldRow.swift in Sources */,
+				BE5F92C422D1DB0D0070F7EF /* BaseDocumentCell.swift in Sources */,
+				BE9F3D27230D84C50008C40D /* DynamicForm.swift in Sources */,
+				0C4A715622AF718A0095F8B6 /* DynamicFormViewController.swift in Sources */,
+				BEF07FE122CE0A3400958B76 /* DDocumentCell.swift in Sources */,
+				BE9F3D23230BDE170008C40D /* DynamicRow.swift in Sources */,
+				0C4A71AB22B6602C0095F8B6 /* DLOV.swift in Sources */,
+				0C4A719422B23DA90095F8B6 /* ValidationCell.swift in Sources */,
+				0C92D88022BA6522003594BC /* BaseDynamicFormViewController.swift in Sources */,
+				0C4A718722B0DF720095F8B6 /* BasicFieldTableViewCell.swift in Sources */,
+				0CD4FE1E22BB57F700A9B3D0 /* DImagePickerCell.swift in Sources */,
+				BEF07FE522CE2AF300958B76 /* CustomCameraViewController.swift in Sources */,
+				0C4A718E22B0E0D20095F8B6 /* DTextFieldCell.swift in Sources */,
 				0C4A715422AF718A0095F8B6 /* AppDelegate.swift in Sources */,
+				0CD4FE2922BB829900A9B3D0 /* ImagePickerController.swift in Sources */,
+				BE9F3D25230C33180008C40D /* DynamicViewController.swift in Sources */,
+				0C4A719A22B2593B0095F8B6 /* DPickerCell.swift in Sources */,
+				0C4A718A22B0DF720095F8B6 /* DBaseRow.swift in Sources */,
+				0C4A71B922B7C5610095F8B6 /* DSwitchCell.swift in Sources */,
+				0CD4FE2222BB701300A9B3D0 /* BaseImageCell.swift in Sources */,
+				BEEEB5C422D09B9A00BDA553 /* DocumentCollectionViewCell.swift in Sources */,
+				0C4A71C522B9191B0095F8B6 /* StringExtension.swift in Sources */,
+				0C4A71D122BA31B40095F8B6 /* DButtonCell.swift in Sources */,
+				0C4A717122AFC3970095F8B6 /* UIResponderExtension.swift in Sources */,
+				0C4A71C322B909AF0095F8B6 /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +640,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +695,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,36 +707,40 @@
 		};
 		0C4A716322AF718B0095F8B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0BF215AC7A432278880295A /* Pods-SampleDynamicForm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZ4PEAQWJD;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = J274N44KNJ;
 				INFOPLIST_FILE = SampleDynamicForm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sampleDocument.SampleDynamicForm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.s4m.SampleDynamicForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "com.s4m.*";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		0C4A716422AF718B0095F8B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E1792AA262174FD0A66A0DA /* Pods-SampleDynamicForm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YZ4PEAQWJD;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SampleDynamicForm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sampleDocument.SampleDynamicForm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.s4m.SampleDynamicForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

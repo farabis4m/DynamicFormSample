@@ -1,0 +1,1829 @@
+{
+    "documents": [
+        {
+            "hint": "Enter valid id ",
+            "key": "NATID",
+            "tag": "NATID",
+            "title": "National ID",
+            "type": "control_Document",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "The chosen image should not exceed the max allowed file size",
+                    "rule": "maxSize",
+                    "value": "250"
+                }
+            ],
+            "values": [
+                {
+                    "code": "NATID",
+                    "desc": "National ID"
+                }
+            ],
+            "documentCount": 1
+        },
+        {
+            "hint": "Enter valid id ",
+            "key": "passport",
+            "tag": "passport",
+            "title": "Passport",
+            "type": "control_Document",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "PPFront",
+                    "desc": "Passport Page-1"
+                },
+                {
+                    "code": "PPBack",
+                    "desc": "Passport Page-2"
+                }
+            ],
+            "documentCount": 2
+        },
+        {
+            "key": "SELFIE",
+            "tag": "SELFIE",
+            "title": "Selfie",
+            "type": "control_Document",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "SELFIE",
+                    "desc": "Selfie"
+                }
+            ],
+            "documentCount": 1
+        }
+    ],
+    "dynamicForm": [
+        {
+            "hint": "Please select your title",
+            "key": "title",
+            "tag": "title",
+            "threshold": "0",
+            "title": "Title",
+            "type": "control_Picker",
+            "values": [
+                {
+                    "code": "Mr.",
+                    "desc": "Mr."
+                },
+                {
+                    "code": "Mrs.",
+                    "desc": "Mrs."
+                },
+                {
+                    "code": "Ms.",
+                    "desc": "Ms."
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your first name here",
+            "key": "firstName",
+            "tag": "firstName",
+            "title": "First Name",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid first name",
+                    "rule": "regex",
+                    "value": "[A-Za-z ]{1,40}"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your middle name",
+            "key": "middleName",
+            "tag": "middleName",
+            "title": "Middle Name",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Please enter a valid middle name",
+                    "rule": "regex",
+                    "value": "[A-Za-z ]{1,40}"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your last name",
+            "key": "lastName",
+            "tag": "lastName",
+            "title": "Last Name",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid last name",
+                    "rule": "regex",
+                    "value": "[A-Za-z ]{1,40}"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "value": "Below fields show linked fields",
+            "key": "label",
+            "tag": "control_Label",
+            "title": "Sample Text Cell",
+            "type": "control_Label",
+            "validations": [],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your mobile number here",
+            "key": "mobileNumber",
+            "tag": "mobileNumber",
+            "title": "Mobile Number",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid mobile number",
+                    "rule": "regex",
+                    "value": "([0-9]){10,13}"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Are you Residence of UAE",
+            "key": "residence",
+            "tag": "residence",
+            "title": "Are you Residence of UAE",
+            "type": "control_Switch",
+            "validations": [],
+            "documentCount": 0
+        },
+        {
+            "hint": "Select your date of birth",
+            "key": "dob",
+            "tag": "dob",
+            "title": "Date of Birth",
+            "type": "control_Calendar",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please select a valid date",
+                    "rule": "dateFormat",
+                    "value": "yyyy-MM-dd"
+                },
+                {
+                    "error": "Please select a valid birth date",
+                    "rule": "regex",
+                    "value": "^(?:[0-9]{2})?[0-9]{2}-[0-3]?[0-9]-[0-3]?[0-9]$"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Select your gender",
+            "key": "gender",
+            "tag": "gender",
+            "threshold": "0",
+            "title": "Gender",
+            "type": "control_Picker",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "M",
+                    "desc": "Male"
+                },
+                {
+                    "code": "F",
+                    "desc": "Female"
+                },
+                {
+                    "code": "U",
+                    "desc": "Undefined"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Select your maritial status",
+            "key": "maritalStatus",
+            "tag": "maritalStatus",
+            "threshold": "0",
+            "title": "Marital Status",
+            "type": "control_Picker",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "Married",
+                    "desc": "Married"
+                },
+                {
+                    "code": "Unmarried",
+                    "desc": "Unmarried"
+                },
+                {
+                    "code": "Widowed",
+                    "desc": "Widowed"
+                },
+                {
+                    "code": "Divorced",
+                    "desc": "Divorced"
+                },
+                {
+                    "code": "Other",
+                    "desc": "Other"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Select your country",
+            "key": "country",
+            "tag": "country",
+            "threshold": "0",
+            "title": "Country",
+            "type": "control_AutoCompleteTextView",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "SVN",
+                    "desc": "Slovenia"
+                },
+                {
+                    "code": "SLB",
+                    "desc": "Solomon Islands"
+                },
+                {
+                    "code": "SOM",
+                    "desc": "Somalia"
+                },
+                {
+                    "code": "ZAF",
+                    "desc": "South Africa"
+                },
+                {
+                    "code": "LBR",
+                    "desc": "Liberia"
+                },
+                {
+                    "code": "GRC",
+                    "desc": "Greece"
+                },
+                {
+                    "code": "GRL",
+                    "desc": "Greenland"
+                },
+                {
+                    "code": "GRD",
+                    "desc": "Grenada"
+                },
+                {
+                    "code": "GLP",
+                    "desc": "Guadeloupe"
+                },
+                {
+                    "code": "GUM",
+                    "desc": "Guam"
+                },
+                {
+                    "code": "GTM",
+                    "desc": "Guatemala"
+                },
+                {
+                    "code": "GGY",
+                    "desc": "Guernsey"
+                },
+                {
+                    "code": "GIN",
+                    "desc": "Guinea"
+                },
+                {
+                    "code": "GNB",
+                    "desc": "Guinea-Bissau"
+                },
+                {
+                    "code": "GUY",
+                    "desc": "Guyana"
+                },
+                {
+                    "code": "HTI",
+                    "desc": "Haiti"
+                },
+                {
+                    "code": "HMD",
+                    "desc": "Heard Island and McDonald Islands"
+                },
+                {
+                    "code": "VAT",
+                    "desc": "Holy See (Vatican City State)"
+                },
+                {
+                    "code": "HND",
+                    "desc": "Honduras"
+                },
+                {
+                    "code": "HKG",
+                    "desc": "Hong Kong"
+                },
+                {
+                    "code": "HUN",
+                    "desc": "Hungary"
+                },
+                {
+                    "code": "ISL",
+                    "desc": "Iceland"
+                },
+                {
+                    "code": "IND",
+                    "desc": "India"
+                },
+                {
+                    "code": "IDN",
+                    "desc": "Indonesia"
+                },
+                {
+                    "code": "IRN",
+                    "desc": "Iran, Islamic Republic of"
+                },
+                {
+                    "code": "IRQ",
+                    "desc": "Iraq"
+                },
+                {
+                    "code": "IRL",
+                    "desc": "Ireland"
+                },
+                {
+                    "code": "IMN",
+                    "desc": "Isle of Man"
+                },
+                {
+                    "code": "ITA",
+                    "desc": "Italy"
+                },
+                {
+                    "code": "JAM",
+                    "desc": "Jamaica"
+                },
+                {
+                    "code": "JPN",
+                    "desc": "Japan"
+                },
+                {
+                    "code": "JEY",
+                    "desc": "Jersey"
+                },
+                {
+                    "code": "JOR",
+                    "desc": "Jordan"
+                },
+                {
+                    "code": "KAZ",
+                    "desc": "Kazakhstan"
+                },
+                {
+                    "code": "KEN",
+                    "desc": "Kenya"
+                },
+                {
+                    "code": "KIR",
+                    "desc": "Kiribati"
+                },
+                {
+                    "code": "PRK",
+                    "desc": "Korea, Democratic People's Republic of"
+                },
+                {
+                    "code": "KOR",
+                    "desc": "Korea, Republic of"
+                },
+                {
+                    "code": "KWT",
+                    "desc": "Kuwait"
+                },
+                {
+                    "code": "KGZ",
+                    "desc": "Kyrgyzstan"
+                },
+                {
+                    "code": "LAO",
+                    "desc": "Lao People's Democratic Republic"
+                },
+                {
+                    "code": "LVA",
+                    "desc": "Latvia"
+                },
+                {
+                    "code": "LBN",
+                    "desc": "Lebanon"
+                },
+                {
+                    "code": "DEU",
+                    "desc": "Germany"
+                },
+                {
+                    "code": "GHA",
+                    "desc": "Ghana"
+                },
+                {
+                    "code": "GIB",
+                    "desc": "Gibraltar"
+                },
+                {
+                    "code": "LSO",
+                    "desc": "Lesotho"
+                },
+                {
+                    "code": "YEM",
+                    "desc": "Yemen"
+                },
+                {
+                    "code": "ZMB",
+                    "desc": "Zambia"
+                },
+                {
+                    "code": "ZWE",
+                    "desc": "Zimbabwe"
+                },
+                {
+                    "code": "AFR",
+                    "desc": "Africa"
+                },
+                {
+                    "code": "EUP",
+                    "desc": "Europe"
+                },
+                {
+                    "code": "LBY",
+                    "desc": "Libiya"
+                },
+                {
+                    "code": "NUS",
+                    "desc": "North American"
+                },
+                {
+                    "code": "SUS",
+                    "desc": "South American"
+                },
+                {
+                    "code": "ASI",
+                    "desc": "Asia"
+                },
+                {
+                    "code": "OAC",
+                    "desc": "Other Arab countries"
+                },
+                {
+                    "code": "LKA",
+                    "desc": "Sri Lanka"
+                },
+                {
+                    "code": "SDN",
+                    "desc": "Sudan"
+                },
+                {
+                    "code": "SUR",
+                    "desc": "Suriname"
+                },
+                {
+                    "code": "SWZ",
+                    "desc": "Swaziland"
+                },
+                {
+                    "code": "SWE",
+                    "desc": "Sweden"
+                },
+                {
+                    "code": "CHE",
+                    "desc": "Switzerland"
+                },
+                {
+                    "code": "SYR",
+                    "desc": "Syrian Arab Republic"
+                },
+                {
+                    "code": "TWN",
+                    "desc": "Taiwan, Province of China"
+                },
+                {
+                    "code": "TJK",
+                    "desc": "Tajikistan"
+                },
+                {
+                    "code": "TZA",
+                    "desc": "Tanzania, United Republic of"
+                },
+                {
+                    "code": "THA",
+                    "desc": "Thailand"
+                },
+                {
+                    "code": "TLS",
+                    "desc": "Timor-Leste"
+                },
+                {
+                    "code": "TGO",
+                    "desc": "Togo"
+                },
+                {
+                    "code": "TKL",
+                    "desc": "Tokelau"
+                },
+                {
+                    "code": "TON",
+                    "desc": "Tonga"
+                },
+                {
+                    "code": "TTO",
+                    "desc": "Trinidad and Tobago"
+                },
+                {
+                    "code": "TUN",
+                    "desc": "Tunisia"
+                },
+                {
+                    "code": "TUR",
+                    "desc": "Turkey"
+                },
+                {
+                    "code": "TKM",
+                    "desc": "Turkmenistan"
+                },
+                {
+                    "code": "TCA",
+                    "desc": "Turks and Caicos Islands"
+                },
+                {
+                    "code": "TUV",
+                    "desc": "Tuvalu"
+                },
+                {
+                    "code": "UGA",
+                    "desc": "Uganda"
+                },
+                {
+                    "code": "UKR",
+                    "desc": "Ukraine"
+                },
+                {
+                    "code": "ARE",
+                    "desc": "United Arab Emirates"
+                },
+                {
+                    "code": "GBR",
+                    "desc": "United Kingdom"
+                },
+                {
+                    "code": "USA",
+                    "desc": "United States"
+                },
+                {
+                    "code": "UMI",
+                    "desc": "United States Minor Outlying Islands"
+                },
+                {
+                    "code": "URY",
+                    "desc": "Uruguay"
+                },
+                {
+                    "code": "UZB",
+                    "desc": "Uzbekistan"
+                },
+                {
+                    "code": "VUT",
+                    "desc": "Vanuatu"
+                },
+                {
+                    "code": "VEN",
+                    "desc": "Venezuela, Bolivarian Republic of"
+                },
+                {
+                    "code": "VNM",
+                    "desc": "Viet Nam"
+                },
+                {
+                    "code": "VGB",
+                    "desc": "Virgin Islands, British"
+                },
+                {
+                    "code": "VIR",
+                    "desc": "Virgin Islands, U.S."
+                },
+                {
+                    "code": "WLF",
+                    "desc": "Wallis and Futuna"
+                },
+                {
+                    "code": "ESH",
+                    "desc": "Western Sahara"
+                },
+                {
+                    "code": "LIE",
+                    "desc": "Liechtenstein"
+                },
+                {
+                    "code": "LTU",
+                    "desc": "Lithuania"
+                },
+                {
+                    "code": "LUX",
+                    "desc": "Luxembourg"
+                },
+                {
+                    "code": "MAC",
+                    "desc": "Macao"
+                },
+                {
+                    "code": "MKD",
+                    "desc": "Macedonia, The Former Yugoslav Republic"
+                },
+                {
+                    "code": "MDG",
+                    "desc": "Madagascar"
+                },
+                {
+                    "code": "MWI",
+                    "desc": "Malawi"
+                },
+                {
+                    "code": "MYS",
+                    "desc": "Malaysia"
+                },
+                {
+                    "code": "MDV",
+                    "desc": "Maldives"
+                },
+                {
+                    "code": "MLI",
+                    "desc": "Mali"
+                },
+                {
+                    "code": "MLT",
+                    "desc": "Malta"
+                },
+                {
+                    "code": "MHL",
+                    "desc": "Marshall Islands"
+                },
+                {
+                    "code": "MTQ",
+                    "desc": "Martinique"
+                },
+                {
+                    "code": "MRT",
+                    "desc": "Mauritania"
+                },
+                {
+                    "code": "MUS",
+                    "desc": "Mauritius"
+                },
+                {
+                    "code": "MYT",
+                    "desc": "Mayotte"
+                },
+                {
+                    "code": "MEX",
+                    "desc": "Mexico"
+                },
+                {
+                    "code": "FSM",
+                    "desc": "Micronesia, Federated States of"
+                },
+                {
+                    "code": "MDA",
+                    "desc": "Moldova, Republic of"
+                },
+                {
+                    "code": "MCO",
+                    "desc": "Monaco"
+                },
+                {
+                    "code": "MNG",
+                    "desc": "Mongolia"
+                },
+                {
+                    "code": "MNE",
+                    "desc": "Montenegro"
+                },
+                {
+                    "code": "MSR",
+                    "desc": "Montserrat"
+                },
+                {
+                    "code": "MAR",
+                    "desc": "Morocco"
+                },
+                {
+                    "code": "MOZ",
+                    "desc": "Mozambique"
+                },
+                {
+                    "code": "MMR",
+                    "desc": "Myanmar"
+                },
+                {
+                    "code": "NAM",
+                    "desc": "Namibia"
+                },
+                {
+                    "code": "NRU",
+                    "desc": "Nauru"
+                },
+                {
+                    "code": "NPL",
+                    "desc": "Nepal"
+                },
+                {
+                    "code": "NLD",
+                    "desc": "Netherlands"
+                },
+                {
+                    "code": "NCL",
+                    "desc": "New Caledonia"
+                },
+                {
+                    "code": "NZL",
+                    "desc": "New Zealand"
+                },
+                {
+                    "code": "NIC",
+                    "desc": "Nicaragua"
+                },
+                {
+                    "code": "NER",
+                    "desc": "Niger"
+                },
+                {
+                    "code": "NGA",
+                    "desc": "Nigeria"
+                },
+                {
+                    "code": "NIU",
+                    "desc": "Niue"
+                },
+                {
+                    "code": "NFK",
+                    "desc": "Norfolk Island"
+                },
+                {
+                    "code": "MNP",
+                    "desc": "Northern Mariana Islands"
+                },
+                {
+                    "code": "NOR",
+                    "desc": "Norway"
+                },
+                {
+                    "code": "AFG",
+                    "desc": "Afghanistan"
+                },
+                {
+                    "code": "ALA",
+                    "desc": "Aland Islands"
+                },
+                {
+                    "code": "CHL",
+                    "desc": "Chile"
+                },
+                {
+                    "code": "CHN",
+                    "desc": "China"
+                },
+                {
+                    "code": "CXR",
+                    "desc": "Christmas Island"
+                },
+                {
+                    "code": "CCK",
+                    "desc": "Cocos (Keeling) Islands"
+                },
+                {
+                    "code": "COL",
+                    "desc": "Colombia"
+                },
+                {
+                    "code": "COM",
+                    "desc": "Comoros"
+                },
+                {
+                    "code": "COG",
+                    "desc": "Congo"
+                },
+                {
+                    "code": "COD",
+                    "desc": "Congo, The Democratic Republic of the"
+                },
+                {
+                    "code": "COK",
+                    "desc": "Cook Islands"
+                },
+                {
+                    "code": "CRI",
+                    "desc": "Costa Rica"
+                },
+                {
+                    "code": "CIV",
+                    "desc": "Cote d'Ivoire"
+                },
+                {
+                    "code": "HRV",
+                    "desc": "Croatia"
+                },
+                {
+                    "code": "CUB",
+                    "desc": "Cuba"
+                },
+                {
+                    "code": "CUW",
+                    "desc": "Curacao"
+                },
+                {
+                    "code": "CYP",
+                    "desc": "Cyprus"
+                },
+                {
+                    "code": "CZE",
+                    "desc": "Czech Republic"
+                },
+                {
+                    "code": "DNK",
+                    "desc": "Denmark"
+                },
+                {
+                    "code": "DJI",
+                    "desc": "Djibouti"
+                },
+                {
+                    "code": "DMA",
+                    "desc": "Dominica"
+                },
+                {
+                    "code": "DOM",
+                    "desc": "Dominican Republic"
+                },
+                {
+                    "code": "ECU",
+                    "desc": "Ecuador"
+                },
+                {
+                    "code": "EGY",
+                    "desc": "Egypt"
+                },
+                {
+                    "code": "SLV",
+                    "desc": "El Salvador"
+                },
+                {
+                    "code": "GNQ",
+                    "desc": "Equatorial Guinea"
+                },
+                {
+                    "code": "ERI",
+                    "desc": "Eritrea"
+                },
+                {
+                    "code": "EST",
+                    "desc": "Estonia"
+                },
+                {
+                    "code": "ETH",
+                    "desc": "Ethiopia"
+                },
+                {
+                    "code": "FLK",
+                    "desc": "Falkland Islands (Malvinas)"
+                },
+                {
+                    "code": "534",
+                    "desc": "Faroe Islands"
+                },
+                {
+                    "code": "FJI",
+                    "desc": "Fiji"
+                },
+                {
+                    "code": "FIN",
+                    "desc": "Finland"
+                },
+                {
+                    "code": "FRA",
+                    "desc": "France"
+                },
+                {
+                    "code": "GUF",
+                    "desc": "French Guiana"
+                },
+                {
+                    "code": "PYF",
+                    "desc": "French Polynesia"
+                },
+                {
+                    "code": "ATF",
+                    "desc": "French Southern Territories"
+                },
+                {
+                    "code": "GAB",
+                    "desc": "Gabon"
+                },
+                {
+                    "code": "GMB",
+                    "desc": "Gambia"
+                },
+                {
+                    "code": "GEO",
+                    "desc": "Georgia"
+                },
+                {
+                    "code": "SGS",
+                    "desc": "South Georgia and the South Sandwich Isl"
+                },
+                {
+                    "code": "SSD",
+                    "desc": "South Sudan"
+                },
+                {
+                    "code": "ESP",
+                    "desc": "Spain"
+                },
+                {
+                    "code": "ALB",
+                    "desc": "Albania"
+                },
+                {
+                    "code": "DZA",
+                    "desc": "Algeria"
+                },
+                {
+                    "code": "ASM",
+                    "desc": "American Samoa"
+                },
+                {
+                    "code": "AND",
+                    "desc": "Andorra"
+                },
+                {
+                    "code": "AGO",
+                    "desc": "Angola"
+                },
+                {
+                    "code": "AIA",
+                    "desc": "Anguilla"
+                },
+                {
+                    "code": "ATA",
+                    "desc": "Antarctica"
+                },
+                {
+                    "code": "ATG",
+                    "desc": "Antigua and Barbuda"
+                },
+                {
+                    "code": "ARG",
+                    "desc": "Argentina"
+                },
+                {
+                    "code": "ARM",
+                    "desc": "Armenia"
+                },
+                {
+                    "code": "ABW",
+                    "desc": "Aruba"
+                },
+                {
+                    "code": "AUS",
+                    "desc": "Australia"
+                },
+                {
+                    "code": "AUT",
+                    "desc": "Austria"
+                },
+                {
+                    "code": "AZE",
+                    "desc": "Azerbaijan"
+                },
+                {
+                    "code": "BHS",
+                    "desc": "Bahamas"
+                },
+                {
+                    "code": "BHR",
+                    "desc": "Bahrain"
+                },
+                {
+                    "code": "BGD",
+                    "desc": "Bangladesh"
+                },
+                {
+                    "code": "BRB",
+                    "desc": "Barbados"
+                },
+                {
+                    "code": "BLR",
+                    "desc": "Belarus"
+                },
+                {
+                    "code": "BEL",
+                    "desc": "Belgium"
+                },
+                {
+                    "code": "BLZ",
+                    "desc": "Belize"
+                },
+                {
+                    "code": "BEN",
+                    "desc": "Benin"
+                },
+                {
+                    "code": "BMU",
+                    "desc": "Bermuda"
+                },
+                {
+                    "code": "BTN",
+                    "desc": "Bhutan"
+                },
+                {
+                    "code": "BOL",
+                    "desc": "Bolivia, Plurinational State of"
+                },
+                {
+                    "code": "BES",
+                    "desc": "Bonaire, Sint Eustatius and Saba"
+                },
+                {
+                    "code": "BIH",
+                    "desc": "Bosnia and Herzegovina"
+                },
+                {
+                    "code": "BWA",
+                    "desc": "Botswana"
+                },
+                {
+                    "code": "BVT",
+                    "desc": "Bouvet Island"
+                },
+                {
+                    "code": "BRA",
+                    "desc": "Brazil"
+                },
+                {
+                    "code": "IOT",
+                    "desc": "British Indian Ocean Territory"
+                },
+                {
+                    "code": "BRN",
+                    "desc": "Brunei Darussalam"
+                },
+                {
+                    "code": "BGR",
+                    "desc": "Bulgaria"
+                },
+                {
+                    "code": "BFA",
+                    "desc": "Burkina Faso"
+                },
+                {
+                    "code": "BDI",
+                    "desc": "Burundi"
+                },
+                {
+                    "code": "KHM",
+                    "desc": "Cambodia"
+                },
+                {
+                    "code": "CMR",
+                    "desc": "Cameroon"
+                },
+                {
+                    "code": "CAN",
+                    "desc": "Canada"
+                },
+                {
+                    "code": "CPV",
+                    "desc": "Cape Verde"
+                },
+                {
+                    "code": "CYM",
+                    "desc": "Cayman Islands"
+                },
+                {
+                    "code": "CAF",
+                    "desc": "Central African Republic"
+                },
+                {
+                    "code": "TCD",
+                    "desc": "Chad"
+                },
+                {
+                    "code": "PSE",
+                    "desc": "Occupied Palestinian Territory"
+                },
+                {
+                    "code": "OMN",
+                    "desc": "Oman"
+                },
+                {
+                    "code": "PAK",
+                    "desc": "Pakistan"
+                },
+                {
+                    "code": "PLW",
+                    "desc": "Palau"
+                },
+                {
+                    "code": "PAN",
+                    "desc": "Panama"
+                },
+                {
+                    "code": "PNG",
+                    "desc": "Papua New Guinea"
+                },
+                {
+                    "code": "PRY",
+                    "desc": "Paraguay"
+                },
+                {
+                    "code": "PER",
+                    "desc": "Peru"
+                },
+                {
+                    "code": "PHL",
+                    "desc": "Philippines"
+                },
+                {
+                    "code": "PCN",
+                    "desc": "Pitcairn"
+                },
+                {
+                    "code": "POL",
+                    "desc": "Poland"
+                },
+                {
+                    "code": "PRT",
+                    "desc": "Portugal"
+                },
+                {
+                    "code": "PRI",
+                    "desc": "Puerto Rico"
+                },
+                {
+                    "code": "QAT",
+                    "desc": "Qatar"
+                },
+                {
+                    "code": "REU",
+                    "desc": "Reunion"
+                },
+                {
+                    "code": "ROU",
+                    "desc": "Romania"
+                },
+                {
+                    "code": "RUS",
+                    "desc": "Russian Federation"
+                },
+                {
+                    "code": "RWA",
+                    "desc": "Rwanda"
+                },
+                {
+                    "code": "SHN",
+                    "desc": "Saint Helena, Ascension and Tristan da C"
+                },
+                {
+                    "code": "KNA",
+                    "desc": "Saint Kitts and Nevis"
+                },
+                {
+                    "code": "LCA",
+                    "desc": "Saint Lucia"
+                },
+                {
+                    "code": "MAF",
+                    "desc": "Saint Martin (French part)"
+                },
+                {
+                    "code": "SPM",
+                    "desc": "Saint Pierre and Miquelon"
+                },
+                {
+                    "code": "VCT",
+                    "desc": "Saint Vincent and The Grenadines"
+                },
+                {
+                    "code": "WSM",
+                    "desc": "Samoa"
+                },
+                {
+                    "code": "SMR",
+                    "desc": "San Marino"
+                },
+                {
+                    "code": "STP",
+                    "desc": "Sao Tome and Principe"
+                },
+                {
+                    "code": "SAU",
+                    "desc": "Saudi Arabia"
+                },
+                {
+                    "code": "SEN",
+                    "desc": "Senegal"
+                },
+                {
+                    "code": "SRB",
+                    "desc": "Serbia"
+                },
+                {
+                    "code": "SYC",
+                    "desc": "Seychelles"
+                },
+                {
+                    "code": "SLE",
+                    "desc": "Sierra Leone"
+                },
+                {
+                    "code": "SGP",
+                    "desc": "Singapore"
+                },
+                {
+                    "code": "SXM",
+                    "desc": "Sint Maarten (Dutch part)"
+                },
+                {
+                    "code": "SVK",
+                    "desc": "Slovakia"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your residency",
+            "key": "residency",
+            "tag": "residency",
+            "title": "Residency",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid residency",
+                    "rule": "regex",
+                    "value": "[A-Za-z#.,0-9 ]{1,40}"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your address",
+            "key": "address",
+            "tag": "address",
+            "title": "Address",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid address",
+                    "rule": "regex",
+                    "value": "[A-Za-z#:.,0-9 ]{1,100}"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your RIM number",
+            "key": "rimNumber",
+            "tag": "rimNumber",
+            "title": "RIM Number",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Please keep the field empty or enter a valid RIM number",
+                    "rule": "regex",
+                    "value": "([0-9]){0,10}"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your RIM type here",
+            "key": "rimType",
+            "tag": "rimType",
+            "threshold": "0",
+            "title": "RIM Type",
+            "type": "control_AutoCompleteTextView",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "Personal",
+                    "desc": "Personal"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your TIN number here",
+            "key": "tin",
+            "tag": "tin",
+            "title": "TIN",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid TIN number",
+                    "rule": "regex",
+                    "value": "([0-9]){12}"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your branch",
+            "key": "branch",
+            "tag": "branch",
+            "threshold": "0",
+            "title": "Branch",
+            "type": "control_AutoCompleteTextView",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "1",
+                    "desc": "Head Office"
+                },
+                {
+                    "code": "10",
+                    "desc": "Islamic Branch"
+                },
+                {
+                    "code": "70",
+                    "desc": "Main Branch"
+                },
+                {
+                    "code": "71",
+                    "desc": "Meezran Branch"
+                },
+                {
+                    "code": "72",
+                    "desc": "Siahyia Branch"
+                },
+                {
+                    "code": "80",
+                    "desc": "Benghazi Branch"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Select your ID",
+            "key": "documentType",
+            "tag": "documentType",
+            "threshold": "0",
+            "title": "ID Type",
+            "type": "control_AutoCompleteTextView",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "Passport",
+                    "desc": "Passport"
+                },
+                {
+                    "code": "Civil Id",
+                    "desc": "Civil Id"
+                },
+                {
+                    "code": "Car License",
+                    "desc": "Car License"
+                },
+                {
+                    "code": "Gun license",
+                    "desc": "Gun license"
+                },
+                {
+                    "code": "Company Registration",
+                    "desc": "Company Registration"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Enter your ID number",
+            "key": "documentNumber",
+            "tag": "documentNumber",
+            "title": "ID Number",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid ID number",
+                    "rule": "regex",
+                    "value": "^(?!^0+$)[a-zA-Z0-9]{6,12}$"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Select the date of expiration",
+            "key": "expiryDate",
+            "tag": "expiryDate",
+            "title": "Date of Expiration",
+            "type": "control_Calendar",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please select a valid date",
+                    "rule": "dateFormat",
+                    "value": "yyyy-MM-dd"
+                },
+                {
+                    "error": "Please select a valid expiration date",
+                    "rule": "regex",
+                    "value": "^(?:[0-9]{2})?[0-9]{2}-[0-3]?[0-9]-[0-3]?[0-9]$"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Select your account type",
+            "key": "accountType",
+            "tag": "accountType",
+            "threshold": "0",
+            "title": "Account Type",
+            "type": "control_AutoCompleteTextView",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "102",
+                    "desc": "102"
+                },
+                {
+                    "code": "201",
+                    "desc": "201"
+                },
+                {
+                    "code": "ECA",
+                    "desc": "ECA"
+                },
+                {
+                    "code": "FAM",
+                    "desc": "FAM"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Please select account class",
+            "key": "accountClass",
+            "tag": "accountClass",
+            "threshold": "0",
+            "title": "Account Class",
+            "type": "control_AutoCompleteTextView",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "2",
+                    "desc": "Retail Current account - USD"
+                },
+                {
+                    "code": "1",
+                    "desc": "Retail Current account - LYD"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+        "value": "Below fields show linked fields",
+        "key": "button",
+        "tag": "control_Button",
+        "title": "Sample Button Cell",
+        "type": "control_Button",
+            "validations": [],
+        "documentCount": 0
+        },
+        {
+            "key": "isCreditShield",
+            "tag": "GEN_isCreditShield",
+            "title": "Control CheckBox",
+            "type": "control_CheckBox",
+            "documentCount": 0,
+            "threshold": "0",
+            "values": [
+                {
+                    "code": "switchOn",
+                    "desc": "True"
+                },
+                {
+                    "code": "switchOff",
+                    "desc": "False"
+                }
+            ]
+        },
+        {
+            "hint": "Plesase select RIM class",
+            "key": "rimClass",
+            "tag": "rimClass",
+            "threshold": "0",
+            "title": "RIM Class",
+            "type": "control_AutoCompleteTextView",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "values": [
+                {
+                    "code": "5",
+                    "desc": "INDIVIDUALS"
+                },
+                {
+                    "code": "19",
+                    "desc": "BANK STAFF"
+                },
+                {
+                    "code": "29",
+                    "desc": "PRIVATE SECTOR STAFF"
+                },
+                {
+                    "code": "30",
+                    "desc": "FOREIGN COMPANY STAFF"
+                },
+                {
+                    "code": "31",
+                    "desc": "NON-RESIDENT STAFF"
+                },
+                {
+                    "code": "32",
+                    "desc": "PROJECTS"
+                },
+                {
+                    "code": "33",
+                    "desc": "DIPLOMATS"
+                },
+                {
+                    "code": "34",
+                    "desc": "RETIRED"
+                },
+                {
+                    "code": "35",
+                    "desc": "PENSION"
+                },
+                {
+                    "code": "38",
+                    "desc": "PUBLIC OFFICIALS"
+                },
+                {
+                    "code": "39",
+                    "desc": "OTHERS"
+                },
+                {
+                    "code": "41",
+                    "desc": "STUDENTS"
+                },
+                {
+                    "code": "42",
+                    "desc": "VIP"
+                },
+                {
+                    "code": "43",
+                    "desc": "SELF EMPLOYED"
+                },
+                {
+                    "code": "44",
+                    "desc": "SENIOR OFFICIAL"
+                },
+                {
+                    "code": "46",
+                    "desc": "MILITARY"
+                },
+                {
+                    "code": "47",
+                    "desc": "Silver Package"
+                },
+                {
+                    "code": "122",
+                    "desc": "Individual (non resident)"
+                },
+                {
+                    "code": "123",
+                    "desc": "Auditors"
+                },
+                {
+                    "code": "130",
+                    "desc": "Shareholders - Individual"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "key": "employmentStatus",
+            "hint": "Control AutoCompleteTextView with linkedfields",
+            "tag": "EMP_employmentStatus",
+            "title": "Employment Status",
+            "type": "control_Picker",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "documentCount": 0,
+            "threshold": "0",
+            "values": [
+                {
+                    "code": "EMP",
+                    "desc": "Employed"
+                },
+                {
+                    "code": "SEM",
+                    "desc": "Not Employed"
+                }
+            ]
+        },
+        {
+            "key": "empStartDate",
+            "tag": "EMP_empStartDate",
+            "hint": "Control Calendar linked with category 1",
+            "title": "Date of Employment",
+            "type": "control_Calendar",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please select a valid date",
+                    "rule": "dateFormat",
+                    "value": "yyyy-MM-dd"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Control edittext linked with category 1",
+            "key": "designation",
+            "tag": "EMP_designation",
+            "title": "Designation",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Only Character Allowed",
+                    "rule": "regex",
+                    "value": "^[a-zA-Z ]*$"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Control edittext linked with category 2",
+            "key": "annualTurnOver",
+            "tag": "EMP_annualTurnOver",
+            "title": "Annual TurnOver",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Number less than 10",
+                    "rule": "regex",
+                    "value": "^([0-9]|[1-8][0-9]|9[0-9]|[1-8][0-9]{2}|9[0-8][0-9]|99[0-9]|[1-8][0-9]{3}|9[0-8][0-9]{2}|99[0-8][0-9]|999[0-9]|[1-8][0-9]{4}|9[0-8][0-9]{3}|99[0-8][0-9]{2}|999[0-8][0-9]|9999[0-9]|[1-8][0-9]{5}|9[0-8][0-9]{4}|99[0-8][0-9]{3}|999[0-8][0-9]{2}|9999[0-8][0-9]|99999[0-9]|[1-8][0-9]{6}|9[0-8][0-9]{5}|99[0-8][0-9]{4}|999[0-8][0-9]{3}|9999[0-8][0-9]{2}|99999[0-8][0-9]|999999[0-9]|10000000)$"
+                }
+            ],
+            "documentCount": 0
+        },
+        {
+            "hint": "Control edittext linked with category 2",
+            "key": "sourceOfIncome",
+            "tag": "EMP_sourceOfIncome",
+            "title": "Source of Income",
+            "type": "control_EditText",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ],
+            "documentCount": 0
+        }
+    ],
+    "relations": [
+        {
+            "Control": "EMP_employmentStatus",
+            "related_list": [
+                "EMP_empStartDate",
+                "EMP_designation",
+                "EMP_annualTurnOver",
+                "EMP_sourceOfIncome"
+            ],
+            "values": [
+                {
+                    "code": "EMP",
+                    "related_controls": [
+                        {
+                            "Control": "EMP_empStartDate"
+                        },
+                        {
+                            "Control": "EMP_designation"
+                        }
+                    ]
+                },
+                {
+                    "code": "SEM",
+                    "related_controls": [
+                        {
+                            "Control": "EMP_annualTurnOver"
+                        },
+                        {
+                            "Control": "EMP_sourceOfIncome"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

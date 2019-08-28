@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="DDocumentCell" customModule="SampleDynamicForm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="322" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="322" height="85.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gbv-5V-V6b">
+                        <rect key="frame" x="10" y="10" width="302" height="65.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D9R-I9-QXi">
+                                <rect key="frame" x="10" y="10" width="282" height="45.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igz-ra-NRB">
+                                        <rect key="frame" x="0.0" y="3" width="243" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="qsi-Pj-eTb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="qYF-hu-9sZ">
+                                        <rect key="frame" x="263" y="10.5" width="19" height="25"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="D9R-I9-QXi" secondAttribute="trailing" constant="10" id="124-K5-olj"/>
+                            <constraint firstItem="D9R-I9-QXi" firstAttribute="leading" secondItem="Gbv-5V-V6b" secondAttribute="leading" constant="10" id="KiK-5w-9gd"/>
+                            <constraint firstItem="D9R-I9-QXi" firstAttribute="top" secondItem="Gbv-5V-V6b" secondAttribute="top" constant="10" id="beb-OX-AYe"/>
+                            <constraint firstAttribute="bottom" secondItem="D9R-I9-QXi" secondAttribute="bottom" constant="10" id="zhN-vZ-a5S"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Gbv-5V-V6b" secondAttribute="bottom" constant="10" id="7Tw-ke-kCA"/>
+                    <constraint firstAttribute="trailing" secondItem="Gbv-5V-V6b" secondAttribute="trailing" constant="10" id="qJu-dy-mHV"/>
+                    <constraint firstItem="Gbv-5V-V6b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vqH-zw-JOP"/>
+                    <constraint firstItem="Gbv-5V-V6b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="yQg-3N-Nt8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="Igz-ra-NRB" id="pRw-jo-WVI"/>
+                <outlet property="view" destination="Gbv-5V-V6b" id="dP6-Pv-aOA"/>
+            </connections>
+            <point key="canvasLocation" x="139.13043478260872" y="167.41071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="camera" width="25" height="25"/>
+    </resources>
+</document>

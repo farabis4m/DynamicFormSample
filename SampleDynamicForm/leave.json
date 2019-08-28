@@ -1,0 +1,147 @@
+{
+    "status": "success",
+    "data": [
+        {
+            "key": "leaveTypeEmployee",
+            "tag": "leaveTypeEmployee",
+            "title": "Leave Type",
+            "type": "control_Dropdown",
+            "placeholder": "Select",
+            "orientation": "horizontal",
+            "required": true,
+            "options": [
+                {
+                    "code": "Annual",
+                    "desc": "Annual(25 days)"
+                },
+                {
+                    "code": "Sick",
+                    "desc": "Sick..."
+                },
+                {
+                    "code": "Maternity",
+                    "desc": "Maternity..."
+                }
+            ],
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ]
+        },
+        {
+            "key": "requestedType",
+            "tag": "RequestedType",
+            "title": "Requested Type",
+            "type": "control_Label",
+            "value": "0 days",
+            "orientation": "horizontal",
+        },
+        {
+            "key": "requestedFor",
+            "tag": "RequestedFor",
+            "title": "Requested For",
+            "type": "control_Label",
+            "value": "0 days",
+            "orientation": "horizontal",
+        }
+    ],
+    "relations": [
+        {
+            "component": "leaveTypeEmployee",
+            "related_list": [
+                "requestedType",
+                "requestedFor"
+            ],
+            "values": [
+                {
+                    "code": "Annual",
+                    "related_controls": [
+                        {
+                            "component": "requestedType"
+                        }
+                    ]
+                },
+                {
+                    "code": "Sick",
+                    "related_controls": [
+                        {
+                            "component": "requestedFor"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "services": [
+        {
+            "relatedComponents": [
+                "leaveType",
+                "calendar"
+            ],
+            "endPoint": "hgdhd/hdghd"
+        },
+        {
+            "relatedComponents": [
+                "leaveType",
+                "calendar"
+            ],
+            "endPoint": "hgdhd/hdghd"
+        }
+    ],
+    "subForms": [
+        {
+            "Control": "Family",
+            "Forms": [
+                {
+                    "tag": "info2",
+                    "title": "Description for info",
+                    "type": "control_Info",
+                    "alignment": "LEFT"
+                },
+                {
+                    "placeholder": "Enter Expense details",
+                    "key": "expense",
+                    "tag": "Expense",
+                    "title": "Expense",
+                    "type": "control_EditText",
+                    "orientation": "horizontal",
+                    "required": true,
+                    "validations": [
+                        {
+                            "error": "Field is required",
+                            "rule": "required"
+                        },
+                        {
+                            "error": "Please enter a valid request type",
+                            "rule": "regex",
+                            "value": "[A-Za-z ]{1,40}"
+                        }
+                    ]
+                },
+                {
+                    "placeholder": "Enter reason",
+                    "key": "reason",
+                    "tag": "Reason",
+                    "title": "Reason",
+                    "type": "control_EditTextView",
+                    "value": "",
+                    "orientation": "horizontal",
+                    "required": true,
+                    "validations": [
+                        {
+                            "error": "Field is required",
+                            "rule": "required"
+                        },
+                        {
+                            "error": "Please enter a valid reason",
+                            "rule": "regex",
+                            "value": "[A-Za-z ]{1,40}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

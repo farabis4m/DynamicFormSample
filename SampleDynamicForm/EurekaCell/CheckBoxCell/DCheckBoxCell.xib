@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DCheckBoxCell" id="TWW-qa-bXs" customClass="DCheckBoxCell" customModule="SampleDynamicForm" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TWW-qa-bXs" id="GRg-Ej-RNI">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eie-Ke-3gP">
+                        <rect key="frame" x="16" y="6" width="25" height="31.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="L8l-5x-CfY"/>
+                        </constraints>
+                        <connections>
+                            <action selector="buttonCheckBox:" destination="-1" eventType="touchUpInside" id="OkI-QB-9qz"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHk-dw-Mbg">
+                        <rect key="frame" x="52" y="6" width="33.5" height="31.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eie-Ke-3gP" firstAttribute="centerY" secondItem="GRg-Ej-RNI" secondAttribute="centerY" id="32F-Bc-VVH"/>
+                    <constraint firstItem="eie-Ke-3gP" firstAttribute="top" secondItem="GRg-Ej-RNI" secondAttribute="top" constant="6" id="G0Y-6F-T1g"/>
+                    <constraint firstItem="mHk-dw-Mbg" firstAttribute="top" secondItem="GRg-Ej-RNI" secondAttribute="top" constant="6" id="QKM-B6-BlS"/>
+                    <constraint firstItem="mHk-dw-Mbg" firstAttribute="leading" secondItem="eie-Ke-3gP" secondAttribute="trailing" constant="11" id="bu0-BV-jzZ"/>
+                    <constraint firstAttribute="bottom" secondItem="mHk-dw-Mbg" secondAttribute="bottom" constant="6" id="fqQ-z1-EB5"/>
+                    <constraint firstItem="eie-Ke-3gP" firstAttribute="leading" secondItem="GRg-Ej-RNI" secondAttribute="leading" constant="16" id="nAZ-Sd-J6V"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mHk-dw-Mbg" secondAttribute="trailing" constant="10" id="sRE-PD-loK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buttonCheckBox" destination="eie-Ke-3gP" id="jmc-TU-pA9"/>
+                <outlet property="titleLabel" destination="mHk-dw-Mbg" id="BBP-hx-clG"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
+        </tableViewCell>
+    </objects>
+</document>
