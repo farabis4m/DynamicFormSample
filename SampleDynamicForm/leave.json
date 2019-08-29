@@ -2,8 +2,65 @@
     "status": "success",
     "data": [
         {
+            "key": "date",
+            "tag": "date",
+            "title": "Till Date",
+            "placeholder": "Select",
+            "type": "control_calendar",
+            "minDate": "19-08-2019",
+            "maxDate": "19-08-2020",
+            "value": "19-08-2019",
+            "dateFormat": "dd-MM-yyyy",
+            "orientation": "horizontal",
+            "required": true,
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ]
+        },
+        {
+            "key": "calendar",
+            "tag": "calendar",
+            "value": "19-08-2019|20-08-2019",
+            "type": "control_calendarRange",
+            "placeholder_left": "Start Date",
+            "placeholder_right": "End Date",
+            "minDate": "19-08-2019",
+            "maxDate": "19-08-2020",
+            "dateFormat": "dd-MM-yyyy",
+            "required": true,
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Start Date should not be greater than End Date",
+                    "rule": "range"
+                }
+            ]
+        },
+        {
+            "key": "employee",
+            "tag": "employee",
+            "title": "Employee",
+            "type": "control_DropdownService",
+            "searchPlaceholder": "Search for Employee",
+            "threshold": "3",
+            "url": "/user/search",
+            "multiSelect": false,
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ]
+        },
+        {
             "key": "leaveTypeEmployee",
-            "tag": "leaveTypeEmployee",
+            "tag": "leaveTypeEmployeeLeaveType",
             "title": "Leave Type",
             "type": "control_Dropdown",
             "placeholder": "Select",
@@ -31,35 +88,175 @@
             ]
         },
         {
-            "key": "requestedType",
-            "tag": "RequestedType",
-            "title": "Requested Type",
-            "type": "control_Label",
-            "value": "0 days",
+            "key": "leaveType",
+            "tag": "LeaveType",
+            "title": "Leave Type",
+            "type": "control_Dropdown",
+            "placeholder": "Select",
             "orientation": "horizontal",
+            "required": true,
+            "options": [
+                {
+                    "code": "Annual",
+                    "desc": "Annual(25 days)"
+                },
+                {
+                    "code": "Sick",
+                    "desc": "Sick..."
+                },
+                {
+                    "code": "Maternity",
+                    "desc": "Maternity..."
+                }
+            ],
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ]
+        },
+        {
+            "key": "replacementUser",
+            "tag": "replacementUser",
+            "title": "Replacement User",
+            "type": "control_DropdownService",
+            "searchPlaceholder": "Search for Employee",
+            "threshold": "3",
+            "url": "/user/search",
+            "multiSelect": true,
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ]
         },
         {
             "key": "requestedFor",
-            "tag": "RequestedFor",
+            "tag": "requestedFor",
             "title": "Requested For",
             "type": "control_Label",
             "value": "0 days",
+            "orientation": "horizontal"
+        },
+        {
+            "tag": "info1",
+            "title": "Description for info",
+            "type": "control_Info",
+            "alignment": "LEFT"
+        },
+        {
+            "tag": "type",
+            "title": "Request Type",
+            "type": "control_EditText",
+            "key": "type",
+            "placeholder": "Enter Request Type",
+            "value": "",
             "orientation": "horizontal",
+            "required": true,
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid request type",
+                    "rule": "regex",
+                    "value": "[A-Za-z ]{1,40}"
+                }
+            ]
+        },
+        {
+            "placeholder": "Enter reason",
+            "key": "reason",
+            "tag": "reason",
+            "title": "Reason",
+            "required": true,
+            "type": "control_EditTextView",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "Please enter a valid reason",
+                    "rule": "regex",
+                    "value": "[A-Za-z ]{1,40}"
+                }
+            ],
+            "value": "",
+            "orientation": "horizontal"
+        },
+        {
+            "key": "docs",
+            "tag": "docs",
+            "title": "Attach Files",
+            "type": "control_Document",
+            "required": true,
+            "placeholder": "Attach Files",
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                },
+                {
+                    "error": "The chosen image should not exceed the max allowed file size",
+                    "rule": "maxSize",
+                    "value": "250"
+                }
+            ],
+            "max_count": 5,
+            "allowed_types": [
+                "pdf",
+                "jpg",
+                "png"
+            ]
+        },
+        {
+            "key": "family",
+            "tag": "family",
+            "title": "Family",
+            "type": "control_Entity",
+            "entityType": "Family",
+            "required": true,
+            "value": ""
+        },
+        {
+            "key": "family",
+            "tag": "family",
+            "title": "Family",
+            "type": "control_Entity_Family",
+            "value": "",
+            "required": true,
+            "searchPlaceholder": "Search for Members",
+            "threshold": "3",
+            "url": "/user/search",
+            "multiSelect": true,
+            "validations": [
+                {
+                    "error": "Field is required",
+                    "rule": "required"
+                }
+            ]
         }
     ],
     "relations": [
         {
-            "component": "leaveTypeEmployee",
+            "component": "LeaveType",
             "related_list": [
-                "requestedType",
-                "requestedFor"
+                "RequestType",
+                "RequestedFor"
             ],
             "values": [
                 {
                     "code": "Annual",
                     "related_controls": [
                         {
-                            "component": "requestedType"
+                            "component": "RequestType"
+                        },
+                        {
+                            "component": "RequestType"
                         }
                     ]
                 },
@@ -67,7 +264,7 @@
                     "code": "Sick",
                     "related_controls": [
                         {
-                            "component": "requestedFor"
+                            "component": "RequestedFor"
                         }
                     ]
                 }
@@ -80,19 +277,18 @@
                 "leaveType",
                 "calendar"
             ],
-            "endPoint": "hgdhd/hdghd"
+            "endPoint": "user/remainingDays"
         },
         {
             "relatedComponents": [
-                "leaveType",
-                "calendar"
+                "employee"
             ],
-            "endPoint": "hgdhd/hdghd"
+            "endPoint": "user/leaveType"
         }
     ],
     "subForms": [
         {
-            "Control": "Family",
+            "Control": "family",
             "Forms": [
                 {
                     "tag": "info2",
@@ -103,7 +299,7 @@
                 {
                     "placeholder": "Enter Expense details",
                     "key": "expense",
-                    "tag": "Expense",
+                    "tag": "expense",
                     "title": "Expense",
                     "type": "control_EditText",
                     "orientation": "horizontal",
@@ -123,7 +319,7 @@
                 {
                     "placeholder": "Enter reason",
                     "key": "reason",
-                    "tag": "Reason",
+                    "tag": "reason",
                     "title": "Reason",
                     "type": "control_EditTextView",
                     "value": "",
