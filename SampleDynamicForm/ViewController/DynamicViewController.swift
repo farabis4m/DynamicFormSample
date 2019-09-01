@@ -63,6 +63,8 @@ class DynamicViewController: FormViewController {
         
         // get the components to hide
         guard  let relatedControls = value.relatedControls else { return }
+        
+        // set the component value
         let rowTags = relation.relatedList?.filter{ !relatedControls.components().contains($0) }
         
         // hide rows
@@ -84,6 +86,7 @@ class DynamicViewController: FormViewController {
                 }
                 else if let dBaseRow = row as? BasePickerRow {
                     dBaseRow.callbackOnRowFocusChanged = { [weak self] option in
+                        self?.manageRelationFor(picker: dBaseRow, selectedOption: option)
                         if relatedRows.areCompleted() {
                             self?.callServiceWith(url: service.endPoint)
                         }
@@ -106,7 +109,7 @@ class DynamicViewController: FormViewController {
         
         let serviceResponse = ServiceResponseForm.decode(params: jsonObjct)
         
-        serviceResponse?.components?.forEach({ (response) in
+        serviceResponse?.components?.forEach({ [weak self] (response) in
             guard let row = form.rowBy(tag: response.component ?? "") else { return }
             
             if let singleValueResponse = response as? SingleValueResponse {
@@ -115,6 +118,7 @@ class DynamicViewController: FormViewController {
             else if let multiValueResponse = response as? MultiValueResponse, let values = multiValueResponse.values {
                 (row as? BasePickerRow)?.values = values
             }
+            self?.tableView.reloadData()
         })
 
     }
