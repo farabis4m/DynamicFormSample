@@ -122,8 +122,9 @@ class DynamicRow: DynamicModel {
     static func decodeContainer(unKeyedContainer: inout UnkeyedDecodingContainer) throws -> DynamicRow? {
         var testContainer = unKeyedContainer
         let row = try? testContainer.decode(DynamicRow.self)
-
-        switch row?.rowType {
+        guard let type = row?.rowType else { return nil }
+        
+        switch type {
         case .label:
             return try? unKeyedContainer.decode(DynamicLabelRow.self)
         case .textField:
@@ -132,6 +133,8 @@ class DynamicRow: DynamicModel {
             return try? unKeyedContainer.decode(DynamicInfoRow.self)
         case .dropDown:
             return try? unKeyedContainer.decode(DynamicDropDownRow.self)
+        case .entity:
+            return try? unKeyedContainer.decode(DynamicEntityRow.self)
         default:
             return try? unKeyedContainer.decode(DynamicRow.self)
         }
@@ -319,6 +322,30 @@ class DynamicDropDownRow: DynamicRow {
         required        = try container.decode(Bool.self, forKey: .required)
         validations     = try container.decode([Validation].self, forKey: .validations)
         options = try container.decode([DynamicRow.Option].self, forKey: .options)
+        try super.init(from: decoder)
+    }
+}
+
+class DynamicEntityRow: DynamicRow {
+    var key: String?
+    var required: Bool?
+    var value: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case key
+        case required
+        case value
+    }
+    
+    override var row: BaseRow? {
+        return DEntityRow(row: self)
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        key = try container.decodeIfPresent(String.self, forKey: .key)
+        required = try container.decodeIfPresent(Bool.self, forKey: .required)
+        value = try container.decodeIfPresent(String.self, forKey: .value)
         try super.init(from: decoder)
     }
 }

@@ -36,6 +36,9 @@ class DynamicViewController: FormViewController {
                     section <<< row
                     
                     self?.handlePickerRow(row: row)
+                    if let entityRow  = row as? DEntityRow {
+                        handleSubForm(row: entityRow)
+                    }
                 }
             }
         }
@@ -122,6 +125,15 @@ class DynamicViewController: FormViewController {
         })
 
     }
+    
+    func handleSubForm(row: DEntityRow) {
+        guard let subForms = dynamicForm?.subForms else { return }
+        subForms.forEach { subForm in
+            if subForm.control == row.tag {
+                row.subRows = subForm.forms ?? []
+            }
+        }
+    }
 
 }
 
@@ -142,8 +154,9 @@ extension Array where Element == Relation.RelatedControl {
 }
 
 extension Array where Element == Relation.Values {
+    
     func valueFor(code: String) -> Relation.Values? {
-        filter{ $0.code == code }.first
+        return filter{ $0.code == code }.first
     }
 }
 
