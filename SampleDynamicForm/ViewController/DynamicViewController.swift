@@ -26,8 +26,6 @@ class DynamicViewController: FormViewController {
     
     func initializeForm(_ dict: [String: Any]) {
         dynamicForm = DynamicForm.decode(params: dict)
-        print(dynamicForm)
-        manageServices()
         
         if let dynamicRows = dynamicForm?.data {
             let section = Section()
@@ -44,8 +42,11 @@ class DynamicViewController: FormViewController {
                 }
             }
         }
-    }
+        
+        manageServices()
 
+    }
+    
     func handlePickerRow(row: BaseRow) {
         guard let pickerRow = row as? BasePickerRow else { return }
         pickerRow.callbackOnRowFocusChanged = { [weak self] option in
@@ -65,6 +66,8 @@ class DynamicViewController: FormViewController {
         
         // get the components to hide
         guard  let relatedControls = value.relatedControls else { return }
+        
+        // set the component value
         let rowTags = relation.relatedList?.filter{ !relatedControls.components().contains($0) }
         
         // hide rows
@@ -76,8 +79,17 @@ class DynamicViewController: FormViewController {
             guard let relatedRows =  form.rowsBy(tags: service.relatedComponents) else { return }
             
             relatedRows.forEach { (row) in
+                
                 if let dBaseRow = row as? DBaseRow {
-                    dBaseRow.onFocusChanged { [weak self] (cell, row) in
+                    dBaseRow.callbackOnRowFocusChanged = { [weak self] in
+                        if relatedRows.areCompleted() {
+                            self?.callServiceWith(url: service.endPoint)
+                        }
+                    }
+                }
+                else if let dBaseRow = row as? BasePickerRow {
+                    dBaseRow.callbackOnRowFocusChanged = { [weak self] option in
+                        self?.manageRelationFor(picker: dBaseRow, selectedOption: option)
                         if relatedRows.areCompleted() {
                             self?.callServiceWith(url: service.endPoint)
                         }
@@ -89,6 +101,29 @@ class DynamicViewController: FormViewController {
     
     func callServiceWith(url: String?) {
         print(url)
+        manageServiceResponse()
+    }
+    
+    func manageServiceResponse() {
+        guard let path = Bundle.main.path(forResource: "serviceResponse", ofType: "json"),
+            let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
+            let jsonObjct = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
+            else { return }
+        
+        let serviceResponse = ServiceResponseForm.decode(params: jsonObjct)
+        
+        serviceResponse?.components?.forEach({ [weak self] (response) in
+            guard let row = form.rowBy(tag: response.component ?? "") else { return }
+            
+            if let singleValueResponse = response as? SingleValueResponse {
+                row.baseValue = singleValueResponse.value
+            }
+            else if let multiValueResponse = response as? MultiValueResponse, let values = multiValueResponse.values {
+                (row as? BasePickerRow)?.values = values
+            }
+            self?.tableView.reloadData()
+        })
+
     }
     
     func handleSubForm(row: DEntityRow) {
