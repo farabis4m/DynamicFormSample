@@ -1,0 +1,29 @@
+{
+    "components": [
+        {
+            "component": "leaveType",
+            "values": [
+                {
+                    "code": "Annual",
+                    "desc": "AAAAA"
+                },
+                {
+                    "code": "Sick",
+                    "desc": "SSSS"
+                },
+                {
+                    "code": "Maternity",
+                    "desc": "MMMMMM"
+                }
+            ]
+        },
+        {
+            "component": "requestedFor",
+            "value": "20 days"
+        },
+        {
+            "component": "income",
+            "value": "30 days"
+        }
+    ]
+}
