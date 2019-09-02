@@ -249,11 +249,13 @@ class DynamicEntityRow: DynamicRow {
     var key: String?
     var required: Bool?
     var value: String?
+    var entityType: EntityType?
     
     private enum CodingKeys: String, CodingKey {
         case key
         case required
         case value
+        case entityType
     }
     
     override var row: BaseRow? {
@@ -265,6 +267,7 @@ class DynamicEntityRow: DynamicRow {
         key = try container.decodeIfPresent(String.self, forKey: .key)
         required = try container.decodeIfPresent(Bool.self, forKey: .required)
         value = try container.decodeIfPresent(String.self, forKey: .value)
+        entityType = try container.decodeIfPresent(EntityType.self, forKey: .entityType)
         try super.init(from: decoder)
     }
 }
@@ -281,12 +284,18 @@ extension DynamicRow {
         case textView = "control_EditTextView"
         case document = "control_Document"
         case entity = "control_Entity"
+        case entityFamily = "control_Entity_Family"
     }
     
     enum RuleType: String, Codable {
         case required
         case regex
         case maxSize
+    }
+    
+    enum EntityType: String, Codable {
+        case family = "Family"
+        case expense = "Expense"
     }
 }
 

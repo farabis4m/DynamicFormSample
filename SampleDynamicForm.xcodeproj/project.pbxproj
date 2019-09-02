@@ -51,6 +51,16 @@
 		0CD4FE2922BB829900A9B3D0 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4FE2822BB829900A9B3D0 /* ImagePickerController.swift */; };
 		908BEF461C72EF2929D980E4 /* Pods_SampleDynamicForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EC010013649BC19B8B8BB7 /* Pods_SampleDynamicForm.framework */; };
 		BE5F92C422D1DB0D0070F7EF /* BaseDocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F92C322D1DB0D0070F7EF /* BaseDocumentCell.swift */; };
+		BE7C7BEE23166F53005C3B9A /* DEntityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C7BED23166F53005C3B9A /* DEntityCell.swift */; };
+		BE7C7BF023166FE9005C3B9A /* DEntityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7C7BEF23166FE9005C3B9A /* DEntityCell.xib */; };
+		BE7C7BF423168DFD005C3B9A /* SubFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C7BF223168DFD005C3B9A /* SubFormViewController.swift */; };
+		BE7C7BF523168DFD005C3B9A /* SubFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE7C7BF323168DFD005C3B9A /* SubFormViewController.xib */; };
+		BE7C7BF823179EFD005C3B9A /* EntityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C7BF623179EFD005C3B9A /* EntityTableViewCell.swift */; };
+		BE7C7BFB2317C896005C3B9A /* EntityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C7BFA2317C896005C3B9A /* EntityObject.swift */; };
+		BE93DE20231B936400EDBC14 /* EntityExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE93DE1E231B936400EDBC14 /* EntityExpenseTableViewCell.swift */; };
+		BE93DE21231B936400EDBC14 /* EntityExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE93DE1F231B936400EDBC14 /* EntityExpenseTableViewCell.xib */; };
+		BE93DE24231BA25800EDBC14 /* EntityFamilyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE93DE22231BA25800EDBC14 /* EntityFamilyTableViewCell.swift */; };
+		BE93DE25231BA25800EDBC14 /* EntityFamilyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE93DE23231BA25800EDBC14 /* EntityFamilyTableViewCell.xib */; };
 		BE9F3D20230BDDC00008C40D /* leave.json in Resources */ = {isa = PBXBuildFile; fileRef = BE9F3D1F230BDDC00008C40D /* leave.json */; };
 		BE9F3D23230BDE170008C40D /* DynamicRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F3D22230BDE170008C40D /* DynamicRow.swift */; };
 		BE9F3D25230C33180008C40D /* DynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F3D24230C33180008C40D /* DynamicViewController.swift */; };
@@ -110,6 +120,16 @@
 		0CD4FE2822BB829900A9B3D0 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		0E1792AA262174FD0A66A0DA /* Pods-SampleDynamicForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleDynamicForm.release.xcconfig"; path = "Target Support Files/Pods-SampleDynamicForm/Pods-SampleDynamicForm.release.xcconfig"; sourceTree = "<group>"; };
 		BE5F92C322D1DB0D0070F7EF /* BaseDocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDocumentCell.swift; sourceTree = "<group>"; };
+		BE7C7BED23166F53005C3B9A /* DEntityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEntityCell.swift; sourceTree = "<group>"; };
+		BE7C7BEF23166FE9005C3B9A /* DEntityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DEntityCell.xib; sourceTree = "<group>"; };
+		BE7C7BF223168DFD005C3B9A /* SubFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubFormViewController.swift; sourceTree = "<group>"; };
+		BE7C7BF323168DFD005C3B9A /* SubFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubFormViewController.xib; sourceTree = "<group>"; };
+		BE7C7BF623179EFD005C3B9A /* EntityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTableViewCell.swift; sourceTree = "<group>"; };
+		BE7C7BFA2317C896005C3B9A /* EntityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityObject.swift; sourceTree = "<group>"; };
+		BE93DE1E231B936400EDBC14 /* EntityExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		BE93DE1F231B936400EDBC14 /* EntityExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntityExpenseTableViewCell.xib; sourceTree = "<group>"; };
+		BE93DE22231BA25800EDBC14 /* EntityFamilyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityFamilyTableViewCell.swift; sourceTree = "<group>"; };
+		BE93DE23231BA25800EDBC14 /* EntityFamilyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntityFamilyTableViewCell.xib; sourceTree = "<group>"; };
 		BE9F3D1F230BDDC00008C40D /* leave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = leave.json; sourceTree = "<group>"; };
 		BE9F3D22230BDE170008C40D /* DynamicRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicRow.swift; sourceTree = "<group>"; };
 		BE9F3D24230C33180008C40D /* DynamicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +208,7 @@
 		0C4A718022B0D0EA0095F8B6 /* EurekaCell */ = {
 			isa = PBXGroup;
 			children = (
+				BE7C7BEC23166A3A005C3B9A /* EntityCell */,
 				BEF07FDE22CE09F500958B76 /* DocumentCell */,
 				0C4A718C22B0DFAB0095F8B6 /* Base */,
 				0C4A719822B244070095F8B6 /* TextFieldCell */,
@@ -288,6 +309,7 @@
 				0C4A71AA22B6602C0095F8B6 /* DLOV.swift */,
 				BE9F3D22230BDE170008C40D /* DynamicRow.swift */,
 				BE9F3D26230D84C50008C40D /* DynamicForm.swift */,
+				BE7C7BFA2317C896005C3B9A /* EntityObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -368,6 +390,22 @@
 				E9EC010013649BC19B8B8BB7 /* Pods_SampleDynamicForm.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE7C7BEC23166A3A005C3B9A /* EntityCell */ = {
+			isa = PBXGroup;
+			children = (
+				BE7C7BED23166F53005C3B9A /* DEntityCell.swift */,
+				BE7C7BEF23166FE9005C3B9A /* DEntityCell.xib */,
+				BE7C7BF223168DFD005C3B9A /* SubFormViewController.swift */,
+				BE7C7BF323168DFD005C3B9A /* SubFormViewController.xib */,
+				BE7C7BF623179EFD005C3B9A /* EntityTableViewCell.swift */,
+				BE93DE1E231B936400EDBC14 /* EntityExpenseTableViewCell.swift */,
+				BE93DE1F231B936400EDBC14 /* EntityExpenseTableViewCell.xib */,
+				BE93DE22231BA25800EDBC14 /* EntityFamilyTableViewCell.swift */,
+				BE93DE23231BA25800EDBC14 /* EntityFamilyTableViewCell.xib */,
+			);
+			path = EntityCell;
 			sourceTree = "<group>";
 		};
 		BEF07FDE22CE09F500958B76 /* DocumentCell */ = {
@@ -461,14 +499,18 @@
 				BEF07FE222CE0A3400958B76 /* DDocumentCell.xib in Resources */,
 				0C4A719022B0E31B0095F8B6 /* DTextFieldCell.xib in Resources */,
 				0C4A715E22AF718B0095F8B6 /* LaunchScreen.storyboard in Resources */,
+				BE93DE21231B936400EDBC14 /* EntityExpenseTableViewCell.xib in Resources */,
+				BE7C7BF023166FE9005C3B9A /* DEntityCell.xib in Resources */,
 				BEEEB5C522D09B9A00BDA553 /* DocumentCollectionViewCell.xib in Resources */,
 				0CD4FE2022BB580900A9B3D0 /* DImagePickerCell.xib in Resources */,
 				0C4A71A822B65FE70095F8B6 /* DLabelCell.xib in Resources */,
 				0C4A715B22AF718B0095F8B6 /* Assets.xcassets in Resources */,
 				0C4A715922AF718A0095F8B6 /* Main.storyboard in Resources */,
+				BE7C7BF523168DFD005C3B9A /* SubFormViewController.xib in Resources */,
 				0C4A719622B23DC90095F8B6 /* ValidationCell.xib in Resources */,
 				0C4A71CE22BA1C610095F8B6 /* DCheckBoxCell.xib in Resources */,
 				0C4A71BB22B7C5700095F8B6 /* DSwitchCell.xib in Resources */,
+				BE93DE25231BA25800EDBC14 /* EntityFamilyTableViewCell.xib in Resources */,
 				0C4A716622AF86C70095F8B6 /* dynamicForm.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,13 +576,16 @@
 				0C4A719222B23D700095F8B6 /* RowExtension.swift in Sources */,
 				0C4A71A622B65FD50095F8B6 /* DLabelCell.swift in Sources */,
 				0C4A71A022B25E490095F8B6 /* Listable.swift in Sources */,
+				BE7C7BEE23166F53005C3B9A /* DEntityCell.swift in Sources */,
 				0CD4FE2722BB823000A9B3D0 /* ImageRow.swift in Sources */,
 				0C4A71CC22BA1B130095F8B6 /* DCheckBoxCell.swift in Sources */,
+				BE7C7BF823179EFD005C3B9A /* EntityTableViewCell.swift in Sources */,
 				0C4A718922B0DF720095F8B6 /* BasicFormCell.swift in Sources */,
 				0C4A71B222B789DF0095F8B6 /* FormExtension.swift in Sources */,
 				0C4A71C722B921D90095F8B6 /* DSearchCell.swift in Sources */,
 				0C4A718822B0DF720095F8B6 /* BaseFieldRow.swift in Sources */,
 				BE5F92C422D1DB0D0070F7EF /* BaseDocumentCell.swift in Sources */,
+				BE93DE20231B936400EDBC14 /* EntityExpenseTableViewCell.swift in Sources */,
 				BE9F3D27230D84C50008C40D /* DynamicForm.swift in Sources */,
 				0C4A715622AF718A0095F8B6 /* DynamicFormViewController.swift in Sources */,
 				BEF07FE122CE0A3400958B76 /* DDocumentCell.swift in Sources */,
@@ -551,15 +596,18 @@
 				0C4A718722B0DF720095F8B6 /* BasicFieldTableViewCell.swift in Sources */,
 				0CD4FE1E22BB57F700A9B3D0 /* DImagePickerCell.swift in Sources */,
 				BEF07FE522CE2AF300958B76 /* CustomCameraViewController.swift in Sources */,
+				BE7C7BF423168DFD005C3B9A /* SubFormViewController.swift in Sources */,
 				0C4A718E22B0E0D20095F8B6 /* DTextFieldCell.swift in Sources */,
 				0C4A715422AF718A0095F8B6 /* AppDelegate.swift in Sources */,
 				0CD4FE2922BB829900A9B3D0 /* ImagePickerController.swift in Sources */,
 				BE9F3D25230C33180008C40D /* DynamicViewController.swift in Sources */,
+				BE7C7BFB2317C896005C3B9A /* EntityObject.swift in Sources */,
 				0C4A719A22B2593B0095F8B6 /* DPickerCell.swift in Sources */,
 				0C4A718A22B0DF720095F8B6 /* DBaseRow.swift in Sources */,
 				0C4A71B922B7C5610095F8B6 /* DSwitchCell.swift in Sources */,
 				0CD4FE2222BB701300A9B3D0 /* BaseImageCell.swift in Sources */,
 				BEEEB5C422D09B9A00BDA553 /* DocumentCollectionViewCell.swift in Sources */,
+				BE93DE24231BA25800EDBC14 /* EntityFamilyTableViewCell.swift in Sources */,
 				0C4A71C522B9191B0095F8B6 /* StringExtension.swift in Sources */,
 				0C4A71D122BA31B40095F8B6 /* DButtonCell.swift in Sources */,
 				0C4A717122AFC3970095F8B6 /* UIResponderExtension.swift in Sources */,

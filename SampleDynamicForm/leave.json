@@ -214,6 +214,15 @@
             ]
         },
         {
+            "key": "expense",
+            "tag": "expense",
+            "title": "Expense",
+            "type": "control_Entity",
+            "entityType": "Expense",
+            "required": true,
+            "value": ""
+        },
+        {
             "key": "family",
             "tag": "family",
             "title": "Family",
@@ -298,6 +307,58 @@
                 },
                 {
                     "placeholder": "Enter Expense details",
+                    "key": "family",
+                    "tag": "family",
+                    "title": "Family",
+                    "type": "control_EditText",
+                    "orientation": "horizontal",
+                    "required": true,
+                    "validations": [
+                        {
+                            "error": "Field is required",
+                            "rule": "required"
+                        },
+                        {
+                            "error": "Please enter a valid request type",
+                            "rule": "regex",
+                            "value": "[A-Za-z ]{1,40}"
+                        }
+                    ]
+                },
+                {
+                    "placeholder": "Enter reason",
+                    "key": "reason",
+                    "tag": "reason",
+                    "title": "Reason",
+                    "type": "control_EditTextView",
+                    "value": "",
+                    "orientation": "horizontal",
+                    "required": true,
+                    "validations": [
+                        {
+                            "error": "Field is required",
+                            "rule": "required"
+                        },
+                        {
+                            "error": "Please enter a valid reason",
+                            "rule": "regex",
+                            "value": "[A-Za-z ]{1,40}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Control": "expense",
+            "Forms": [
+                {
+                    "tag": "info2",
+                    "title": "Description for info",
+                    "type": "control_Info",
+                    "alignment": "LEFT"
+                },
+                {
+                    "placeholder": "Enter Expense details",
                     "key": "expense",
                     "tag": "expense",
                     "title": "Expense",
@@ -321,7 +382,7 @@
                     "key": "reason",
                     "tag": "reason",
                     "title": "Reason",
-                    "type": "control_EditTextView",
+                    "type": "control_EditText",
                     "value": "",
                     "orientation": "horizontal",
                     "required": true,
