@@ -67,3 +67,12 @@ class Family: Entity {
         try super.init(from: decoder)
     }
 }
+
+class SubFormResponse: Codable {
+    var key: String?
+    var value: String?
+    var rowPattern: DynamicRow.RowPattern?
+    
+    init() {
+    }
+}

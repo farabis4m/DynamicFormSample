@@ -365,6 +365,64 @@
                     "type": "control_EditText",
                     "orientation": "horizontal",
                     "required": true,
+                    "rowPattern": {
+                        "visible": true,
+                        "order": 1,
+                        "fontStyle": "bold",
+                        "alignment": "left"
+                    },
+                    "validations": [
+                        {
+                            "error": "Field is required",
+                            "rule": "required"
+                        },
+                        {
+                            "error": "Please enter a valid request type",
+                            "rule": "regex",
+                            "value": "[A-Za-z ]{1,40}"
+                        }
+                    ]
+                },
+                {
+                    "placeholder": "Enter Expense details",
+                    "key": "expense1",
+                    "tag": "expense1",
+                    "title": "Expense1",
+                    "type": "control_EditText",
+                    "orientation": "horizontal",
+                    "required": true,
+                    "rowPattern": {
+                        "visible": true,
+                        "order": 1,
+                        "fontStyle": "bold",
+                        "alignment": "left"
+                    },
+                    "validations": [
+                        {
+                            "error": "Field is required",
+                            "rule": "required"
+                        },
+                        {
+                            "error": "Please enter a valid request type",
+                            "rule": "regex",
+                            "value": "[A-Za-z ]{1,40}"
+                        }
+                    ]
+                },
+                {
+                    "placeholder": "Enter Expense details",
+                    "key": "expense2",
+                    "tag": "expense2",
+                    "title": "Expense2",
+                    "type": "control_EditText",
+                    "orientation": "horizontal",
+                    "required": true,
+                    "rowPattern": {
+                        "visible": true,
+                        "order": 1,
+                        "fontStyle": "bold",
+                        "alignment": "left"
+                    },
                     "validations": [
                         {
                             "error": "Field is required",
@@ -386,6 +444,12 @@
                     "value": "",
                     "orientation": "horizontal",
                     "required": true,
+                    "rowPattern": {
+                        "visible": true,
+                        "order": 2,
+                        "fontStyle": "normal",
+                        "alignment": "right"
+                    },
                     "validations": [
                         {
                             "error": "Field is required",

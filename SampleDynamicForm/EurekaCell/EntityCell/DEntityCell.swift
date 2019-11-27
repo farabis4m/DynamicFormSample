@@ -15,12 +15,22 @@ class DEntityCell: DBaseCell {
     @IBOutlet weak var buttonAdd: UIButton?
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var heightConstraintTableView: NSLayoutConstraint?
+    @IBOutlet weak var heightConstraintStackView: NSLayoutConstraint?
+    @IBOutlet weak var stackView: UIStackView?
     
-    var entityType: DynamicRow.EntityType? {
+   /* var entityType: DynamicRow.EntityType? {
         return (row as? DEntityRow)?.entityType
     }
     
-    var entities: [Entity]?
+    var entities: [Entity]?*/
+    
+    var subRows: [[SubFormResponse]]? {
+        return (row as? DEntityRow)?.resultRows
+    }
+    
+    var entityRow: DEntityRow? {
+        return (row as? DEntityRow)
+    }
     
     override func setup() {
         super.setup()
@@ -30,9 +40,10 @@ class DEntityCell: DBaseCell {
         tableView?.isHidden = true
         tableView?.dataSource = self
         tableView?.delegate = self
-        tableView?.register(UINib(nibName: "EntityExpenseTableViewCell", bundle: nil), forCellReuseIdentifier: "EntityExpenseTableViewCell")
-        tableView?.register(UINib(nibName: "EntityFamilyTableViewCell", bundle: nil), forCellReuseIdentifier: "EntityFamilyTableViewCell")
-//        tableView?.estimatedRowHeight = 90
+        /*tableView?.register(UINib(nibName: "EntityExpenseTableViewCell", bundle: nil), forCellReuseIdentifier: "EntityExpenseTableViewCell")
+        tableView?.register(UINib(nibName: "EntityFamilyTableViewCell", bundle: nil), forCellReuseIdentifier: "EntityFamilyTableViewCell")*/
+        tableView?.register(UINib(nibName: "DEntityTableViewCell", bundle: nil), forCellReuseIdentifier: "DEntityTableViewCell")
+//        tableView?.estimatedRowHeight = 50//UITableView.automaticDimension
 //        tableView?.rowHeight = UITableView.automaticDimension
         layoutIfNeeded()
     }
@@ -40,23 +51,34 @@ class DEntityCell: DBaseCell {
     override func update() {
         super.update()
         
-        getEntityModel()
+       /* getEntityModel() */
         tableView?.reloadData()
         
         labelEntity?.text = row.title
-        tableView?.isHidden = (row as? DEntityRow)?.dataSource?.isEmpty ?? true
+        tableView?.isHidden = entityRow?.dataSource?.isEmpty ?? true
+        perform(#selector(loadCell), with: self, afterDelay: 0.0)
         layoutSubviews()
+//
+    }
+    
+    @objc func loadCell() {
+        self.layoutSubviews()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         if !(tableView?.isHidden ?? true) {
-            heightConstraintTableView?.constant = tableView?.contentSize.height ?? 50
+            heightConstraintTableView?.constant = tableView?.contentSize.height ?? 40
+            
         }
-        
+        let size = stackView?.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        print("stackview Size: \(size) tableview height: \(heightConstraintTableView?.constant)")
+        heightConstraintStackView?.constant = size?.height ?? 50
+        stackView?.layoutSubviews()
+        print("stackview height: \(stackView?.frame.height)")
     }
     
-    func getEntityTypeCell() -> String? {
+  /*  func getEntityTypeCell() -> String? {
         guard let type = entityType else { return nil }
         switch type {
         case .expense:
@@ -90,7 +112,7 @@ class DEntityCell: DBaseCell {
                 entity.extraFields = extraFields
             }
         }
-    }
+    }*/
     
     @IBAction func buttonActionAdd(_ sender: Any) {
     }
@@ -100,14 +122,26 @@ class DEntityCell: DBaseCell {
 extension DEntityCell: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entities?.count ?? 0
+        /*return entities?.count ?? 0 */
+        return subRows?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cellIdentifier = getEntityTypeCell(), let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EntityTableViewCell else { return UITableViewCell() }
+       /* guard let cellIdentifier = getEntityTypeCell(), let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EntityTableViewCell else { return UITableViewCell() }
         cell.entity = entities?[indexPath.row]
         cell.configureCell()
+        return cell*/
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DEntityTableViewCell", for: indexPath) as? DEntityTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.rows = subRows?[indexPath.row]
+        cell.configureCell()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
     }
 }
 
@@ -117,6 +151,7 @@ final class DEntityRow: DBaseRow, RowType {
     public var presentationMode: PresentationMode<PresentedController>?
     
     var subRows: [DynamicRow] = []
+    var resultRows: [[SubFormResponse]] = []
     var dataSource: [[String: Any]]?
     var entityType: DynamicRow.EntityType?
     
@@ -131,6 +166,7 @@ final class DEntityRow: DBaseRow, RowType {
         title = row.title
         entityType = row.entityType
         dataSource = []
+        resultRows = []
         
         presentationMode = .show(controllerProvider: ControllerProvider.callback {
             return PresentedController()
@@ -147,6 +183,7 @@ final class DEntityRow: DBaseRow, RowType {
                 
                 controller.onDismissCallback = { [weak self] viewController in
                     self?.dataSource?.append(viewController.formValues)
+                    self?.resultRows.append(viewController.subform)
                     self?.cell.update()
                     viewController.navigationController?.popViewController(animated: true)
                 }

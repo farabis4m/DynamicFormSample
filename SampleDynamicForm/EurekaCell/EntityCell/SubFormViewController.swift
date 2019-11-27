@@ -12,6 +12,7 @@ import Eureka
 class SubFormViewController: FormViewController {
     var formValues: [String: Any] = [:]
     var onDismissCallback: ((SubFormViewController) -> Void)?
+    var subform = [SubFormResponse]()
     
     var rows: [DynamicRow]? {
         didSet {
@@ -37,12 +38,24 @@ class SubFormViewController: FormViewController {
     }
     
     @IBAction func buttonActionAdd(_ sender: Any) {
-        form.allRows.forEach { (row) in
+      /*  form.allRows.forEach { (row) in
             if let tag = row.tag {
                 let value = form.value(for: tag) ?? ""
                 formValues[tag] = value
             }
         }
+        onDismissCallback?(self)*/
+        let updatedRows = rows?.filter { $0.rowType == DynamicRow.RowType.textField }
+        updatedRows?.forEach({ (row) in
+            if let tag = row.tag {
+                let subformResponse = SubFormResponse()
+                subformResponse.key = (row as? DynamicTextFieldRow)?.key
+                subformResponse.value = form.value(for: tag) ?? ""
+                subformResponse.rowPattern = (row as? DynamicTextFieldRow)?.rowPattern
+                subform.append(subformResponse)
+            }
+        })
+        print(subform)
         onDismissCallback?(self)
     }
    

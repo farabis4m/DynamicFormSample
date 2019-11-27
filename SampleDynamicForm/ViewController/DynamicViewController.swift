@@ -20,6 +20,7 @@ class DynamicViewController: FormViewController {
             let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe),
             let jsonObjct = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any]
             else { return }
+        
         initializeForm(jsonObjct)
     }
 

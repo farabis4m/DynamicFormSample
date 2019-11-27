@@ -42,12 +42,4 @@ class EntityTableViewCell: UITableViewCell {
     
 }
 
-extension UIStackView {
-    func removeFirstArrangedView() {
-        for item in arrangedSubviews {
-            removeArrangedSubview(item)
-            item.removeFromSuperview()
-            break
-        }
-    }
-}
+
